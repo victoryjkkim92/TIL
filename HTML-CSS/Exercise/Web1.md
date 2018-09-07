@@ -80,12 +80,13 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="container"></div>
-    <header class="header"></header>
-    <div class="visual"></div>
-    <main class="main"></main>
-    <article class="slogan"></article>
-    <footer class="footer"></footer>
+    <div class="container">
+        <header class="header">헤더</header>
+        <div class="visual">비주얼</div>
+        <main class="main">메인</main>
+        <article class="slogan">슬로건</article>
+        <footer class="footer">푸터</footer>
+    </div>
 </body>
 </html>
 ```
