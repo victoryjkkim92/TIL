@@ -64,7 +64,7 @@
 코드로 나타내면 어떻게 보일까요? (전, Visual Studio Code를 사용했어요)
 
   
-![Alt text](images/firstdraft_code.png)
+![Alt text](images/first_code.png)
 
 
 ```
