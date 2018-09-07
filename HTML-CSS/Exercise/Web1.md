@@ -93,6 +93,8 @@
 
 * 하지만 사실 이렇게만 해서는 저 화면에 보이는 출력값을 얻을 수가 없어요! 이 부분은 다음번에 더 자세히 알아볼게요 :)
 
+![Alt text](images/web1_actual.png)
+
  
 ## Today I found out
 
