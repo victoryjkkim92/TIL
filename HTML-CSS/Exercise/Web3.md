@@ -26,7 +26,7 @@
                     <a href="#">사이트맵</a>
                 </li>
                 <li>
-                    <a href="#">ENGLISH</a>
+                    <a href="#">english</a>
                 </li>
             </ul>
             
