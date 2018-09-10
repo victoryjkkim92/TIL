@@ -61,20 +61,20 @@ Eric Myer reset css reference : [Eric Myer reset css code](https://cssreset.com/
 * font속성
 
 	+ font-size : 
-		`normal, italic, oblique; oblique <angle>`
+		`normal, italic | oblique | oblique <angle>`
 	+ font-weight : 
-		`normal, bold, lighter, bolder ,<number>`
+		`normal | bold | lighter | bolder | <number>`
 	+ font-variant : 
-		`normal, none, etc`
+		`normal | none, etc`
 		etc ref : [font-variant](https://developer.mozilla.org/en-US/docs/Web/CSS/font-variant)
 	+ line-heignt : 
-		`normal, <number>, <length>, <percentage>`
+		`normal | <number> | <length> | <percentage>`
 	+ font-size : 
-		`xx-small, x-small, small, medium, large, x-large, xx-large, <relative-size> values, <length> values, <percentage> values, Global values`
+		`xx-small | x-small | small | medium | large | x-large | xx-large | <relative-size> values | <length> values | <percentage> values | Global values`
 	+ font-family : 
-		`ex) serif, san-serif, etc`
+		`ex) serif | san-serif | etc`
 	+ font-stretch :
-		`normal, semi-condensed, condensed, extra-condensed, ultra-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded, <percentage> `
+		`normal | semi-condensed | condensed | extra-condensed | ultra-condensed | semi-expanded | expanded | extra-expanded | ultra-expanded | <percentage> `
 
 
 > If font is specified as a shorthand for several font-related properties, then: it must include values for: font-size, font-family /  it may optionally include values for: font-size, font-variant, font-weight, font-height
