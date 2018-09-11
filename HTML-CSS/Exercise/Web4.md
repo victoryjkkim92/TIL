@@ -17,7 +17,7 @@
 클래스 선택자를 아무리 많이 더하여 사용해도, ID 선택자보다 우선할 수는 없다.
 
 > 박스모델(Box-model) : padding과 border, margin은 width에 포함되지 않는다. (box-sizing: border-box이면 margin만 미포함)
--
+
 
 ## 에이전트 스타일 (Agent Style)를 초기화 시키는 리셋스타일 / 리셋 CSS(Reset CSS) 
 
@@ -46,7 +46,7 @@ Eric Myer reset css reference : [Eric Myer reset css code](https://cssreset.com/
 	menu, nav, output, ruby, section, summary,
 	time, mark, audio, video{
 	
-	margin: 0;
+		margin: 0;
     	padding: 0;
     	border: 0;
     	font-size: 1em;
