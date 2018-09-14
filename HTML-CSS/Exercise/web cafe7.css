@@ -345,14 +345,19 @@ content:"원하는 출력값" 을 꼭 적어주어야함 _ 출력값엔 아무�
     background: yellow;
     position: relative;
 }
+.user-pw{
+    margin-top: 6px;
+}
 .login-form label{
-    background:lime;
     width:4em;
     display: inline-block;
 }
 .login-form input{
-    width: 100px;
-    height: 22px;
+    width: 95px;
+    height:22px;
+    padding-left: 5px;
+    /* border: 0;
+    border-bottom: 1px solid #666; 입력란 보더 디자인에 따라 바꿔줄 수 있음*/
 }
 .btn-login{
     width:50px;
