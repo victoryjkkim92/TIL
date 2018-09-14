@@ -207,7 +207,7 @@ content:"원하는 출력값" 을 꼭 적어주어야함 _ 출력값엔 아무�
 }
 .sub-menu a{
     padding: 8px 0; /* .menu 박스로 부터 위래로 간격을 줘서 띄움  */
-    margin-right: 0 10px; /* 링크를 걸어놓은 부분을 늘려주어 접근성을 높임 */
+    margin-right: 10px; /* 링크를 걸어놓은 부분을 늘려주어 접근성을 높임 */
 }
 /* .sub-menu a::before{
     font-family: "webcafeIcon";
