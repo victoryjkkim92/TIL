@@ -1,0 +1,383 @@
+@charset "utf-8"; 
+@import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css");
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700");
+@import url("fonts.css");
+@import url("https://raw.githubusercontent.com/daneden/animate.css/master/animate.css");
+/* 스타일 초기화 */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+/*fieldset,*/ form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video /* * : 전체선택자*/ {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 1em;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */ /* 모르는 태그가 나오면 inline요소처리하는데, 해당 태그들를 block 요소로 만들어줌 */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, main {
+	display: block;
+}
+ul { 
+	list-style-type: none; /* 리스트 스타일 none하면 불릿표시 사라짐_ol태그에도 사용할 수 있지만 그럼 순서가 사라져 목적을 잃음 */ 
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* CSS 모듈 */
+
+.clearfix::after{
+    content:"";
+    display: block;
+    clear: both;
+}
+/* 숨김 콘텐츠 */
+.readable-hidden, .skip-nav, legend{
+    /* display:none; 보이지 않게 할 순 있음 : tab키로 읽을 수 없음 */
+    /* visibility: hidden; 존재하지만 화면에서 숨겨짐 : tab키로 읽을 수 없음  */
+    position: absolute;
+    /* left: -9999em; 상징적인 숫자 _ 그냥 멀리 어디로 보내겠다는 의미 */
+    width: 1px;
+    height: 1px;
+    overflow: hidden; /* 넘치는 부분을 숨기겠다고 하는 의미 */
+    margin: -1px;
+    clip: rect(0,0,0,0);/* 접근할 수 있으면서도 화면에는 출력되지 않음 : 웹접근성 */
+}
+.skip-nav:focus{  /* 커서로 선택할 수 있는 부분을 넓혀주어 사용자에게 편리하게 만들어줌 */
+    /* position: static; */
+    width: 100%;
+    height: auto;
+    padding: 1em;
+    background: #000;
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    clip:rect(auto, auto, auto, auto);
+    z-index: 100;
+}
+/* 본문스타일 */
+html{
+    font-size: 10px;
+}
+body{ 
+    color: #181818;
+    background: url("images/bg_flower.png") no-repeat 50% 0, 
+    linear-gradient(to bottom, #aaa, #eee);
+    background-color: #aaa;
+    font-family: "Noto Sans KR", sans-serif;
+    /* 맨 위부분 참조: @import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700");*/
+    font-weight: 400;
+    font-size: 1.4rem;
+} 
+/* 하이퍼링크 스타일*/
+a{
+    color: inherit;      /* 부모요소의 색을 물려받음 */   
+    text-decoration: none;  /* 원래 링크가 걸리면 밑줄이 쳐지는데 그것을 없앰*/
+}
+*, *::before, *::after{     /* 전체 선택자와, 전체 가상요소들에게 박스 사이징을 보더박스로 지정*/
+    box-sizing: border-box;
+}
+/* 레이아웃 */
+.header, .visual, .main, .slogan, .footer{
+    width: 940px;
+    margin: 0 auto; 
+}
+/* 헤더 */
+.header {
+    /* background-color: #fff; */
+    background: #fff;
+    position: relative; /* static을 기준 */
+    padding: 0 30px;
+    border-radius: 0 0 15px 15px;
+}
+/* 로고 */
+.logo{
+    position: absolute; /*부모를 따라가야하니 absolute*/
+    top: 50px;
+    left: 65px;
+    z-index:100;
+}
+/* 멤버 링크 */
+.member {  /* <header>아래 <ul>선택자의 클래스 네임*/
+    /* background: yellow; */
+    text-align: right; /* 텍스트 정렬 방향 */
+    font-size: 0;
+    padding: 2px 0 2px 0;
+    margin-right: -10px; /* 오른쪽에서 반대로 -10px이동 */
+}
+.member li, .member a{
+    display: inline-block; /*인라인요소의 성격과 블록요소의 성격을 모드 살림*/
+}
+.member li{
+    font-size: 1.4rem; /*글씨크기*/
+}
+.member li:nth-child(n+2)::before{
+            content: ":"; /* member의 li의 child노드 중 두번째부터 앞에 :을 붙이겠다는 의미*/
+        }
+/* ::before은 값들의 앞에 가상의 값을 만들어줌 + 
+content:"원하는 출력값" 을 꼭 적어주어야함 _ 출력값엔 아무것도 안적어도됨 */
+.member a{      
+    padding: 8px 10px; /* a태그를 감싸고 있는 부분의 패딩을 추가함 */
+    text-transform: uppercase;  
+}
+/* 메인 메뉴 */
+.navigation{
+    padding-bottom: 40px;
+}
+.menu {
+    border-top: 2px solid #000;
+    background-color: #F37335; 
+        /* 예외상황처리 | fallback : CSS3를 지원하지 못하는 상황에서 이를 대체할 수 있는 대안 */
+    background-image: linear-gradient(to bottom,#FDC830 0%, #F37335 30%, #F37335 60%, #FDC830 100%) ;
+        /* 배경색을 gradient로 지정하고 싶을때 | 속성찾아보기 */
+        /* (gradient | 방향지정_default : top to bottom,, 색상지정, 위치지정) */
+        /* repeating-linear-gradient : gradient를 반복적으로 주고싶을 경우 */ 
+    padding-left: 225px;
+    /* overflow: hidden;  height : 47px; 높이를 지정해주는 대신 overflow로 문제해결 
+    visible(기본값)이 아닌 다른 값으로 overflow 속성을 사용할 경우 
+    새로운 블록 서식 문맥 (block formatting context) 을 생성하게 됩니다. */
+    border-radius: 0 0 5px 5px; /* 모서리를 둥굴게 처리 | 아래쪽에 스타일 처리 */
+    height: 47px;
+}
+/* .menu > li{ 구조선택자 : 자식선택자 | 직계자식만 선택
+    float: left;
+}*/
+.menu-item{
+    position: relative; /* 지금 스타일링 상태(nomal position)에서 적용되야 함으로 */
+    float:left; /* .menu의 padding-left:225px 옆으로 적용됨 */
+    border-left: 2px solid rgba(255,255,255,0.5);
+}
+.menu-item:focus, .sub-menu a:focus{    
+    /* The :focus selector is used to select the element that has focus.
+        Tip: The :focus selector is allowed on elements that accept keyboard events or other user inputs. */
+    outline: 0;  /* 겉 테두리 0 | 없음 */
+}
+.menu-act .menu-item-text{
+    color: #ff0;        /* .menu-act 효과적용시 .menu-item-text의 글씨 색상 지정 */
+}
+.menu-act .menu-item-text::after{  /*  .menu-item-text선택자(<span>태그 사용) 뒤에 가상 요소를 만들어서 
+    검정생 밑 줄이 있는 것 처럼 보여줌 | The <span> tag is used to group inline-elements in a document. */
+    content: "";
+    display: block;
+    border-bottom: 2px solid #000;
+}
+.menu-item-text{
+    font-size: 1.6rem; /* 부모속성의 1.6배 */
+    font-weight: 700; /* 화면 출력시 두껍게 보임 */
+    color:#fff;
+    text-shadow: 1px 0 0 #000, 
+                 0 1px 0 #000, 
+                -1px 0 0 #000,
+                 0 -1px 0 #000;  /* ,를 사용해 멀티 쉐도우 효과 */
+    padding: 0 20px; /* 양쪽으로 여백을 줘서 공간을 줌*/
+    display: block; 
+    line-height: 45px; /* 글짜가 padding을 준 것 처럼 보임 |
+     .menu의 높이가 47px, 보더 탑이 2px이라 그것을 빼줌 */
+}
+.menu-act .sub-menu{
+    display:block;
+}
+.sub-menu{
+    position: absolute;
+    display: none; /* 하위 메뉴들을 보이지 않게 숨겨놓음 | .menu-act / jquery사용해서 보여지게 만듬 */
+    top: 47px;
+    /* left: 0; */
+    white-space: nowrap; /* 충분한 자리가 없을때 wrap현상이 생겨 밑으로 보여지지 않고 그냥 가로 나열함 */
+} 
+.menu-item:nth-child(-n+3) .sub-menu{
+    left: 0;  /* .menu-item의 자식 중 첫번째 부터 3변째까지 + 그 밑의 .sub-menu 값들을 왼쪽 정렬 */
+}
+.menu-item:nth-child(n+4) .sub-menu{
+    right: 0;   /* .menu-item의 자식 중 4번째부터 끝까지 + 그 밑의 .sub-menu 값들을 오른쪽 정렬 */
+}
+.sub-menu li, .sub-menu a{
+    display: inline-block;   /* 가로로 보여지게 만들어줌 */
+}
+.sub-menu a{
+    padding: 8px 0; /* .menu 박스로 부터 위래로 간격을 줘서 띄움  */
+    margin-right: 10px; /* 링크를 걸어놓은 부분을 늘려주어 접근성을 높임 */
+}
+/* .sub-menu a::before{
+    font-family: "webcafeIcon";
+    content: "r";
+    position: relative;
+    top: 2px;
+}
+.sub-menu a:hover::before, 마우스로 접근했을 때 아이콘이 변함 
+.sub-menu a:focus::before{ 키보드로 접근했을 때에도 아이콘이 변함 
+    content: "c";
+} */
+
+/* 비주얼 */
+.visual{
+    position: relative;
+    min-height: 120px; /* 최소 높이 지정*/
+    /* border-top: 2px solid transparent;  이렇게 쓰기도 함  : height : 120px; */
+    /* overflow: hidden; */
+    /* background: url("images/ani_flower_01.png") no-repeat 0 -10px, 
+    url("images/ani_flower_02.png") no-repeat 670px 0, 
+    url("images/ani_flower_03.png") no-repeat 300px 0,
+    url("images/ani_flower_04.png") no-repeat 800px 15px;  background img로 삽입*/
+}
+/*비주얼 애니메이션*/
+@keyframes flowerAni{
+    0%{
+        opacity: 1;            /* 상자 자체를 투명하게 한다는 의미 */
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes textAni{
+    0%{
+        font-size: 12px;
+        color: rgba(0,0,0,0.2); /* 0.2는 투명도*/
+        left:0;
+        top: 0;
+       /* margin:0; margin을 쓰면 컨텐츠의 높이가 늘어난 것처럼 보임 + border-top과 함께쓰임 */
+        /*padding 사용 가능*/
+        /* transform:translate(0,0) 브라우저 성능에 영향을 최소화 */
+    }
+    100%{
+        font-size: 24px;
+        color: rgba(0,0,0,1);
+        left: 400px;
+        top: 75px;
+        /* margin: 75px 0 0 400px; */
+        /* padding 사용 가능 */
+        /* transform:translate(400px, 75px);  
+        overflow된 것 처럼 출력됨_ 1. 부모영역(.visual)에 overflow:hidden 추가
+                2. 자신의 영역(.visual-text)의 display:inline-block으로 변경*/
+    }
+}
+.visual::before, .visual::after{
+    /* animation-name: flowerAni;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;  
+    animation-direction: alternate;  */
+    animation: flowerAni 2s forwards infinite alternate ease-in-out;  
+    content:"";
+    position:absolute;      /* .visual의 position:relative에 영향받음 */
+    top: 0;
+    left: 0;            
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+}
+.visual::before{
+    background-image: url("images/ani_flower_01.png"), 
+    url("images/ani_flower_02.png");
+    background-position: 0 -10px, 670px 0;
+}
+.visual::after{
+    animation-delay: 1s; /* .visual::before가 시작된 1초 후에 애니메이션이 시작 */ 
+    background-image: url("images/ani_flower_03.png"),
+    url("images/ani_flower_04.png");
+    background-position: 300px 0, 800px 15px;
+}
+.visual-text{
+    position: absolute;
+    z-index: 100; /* 화면 맨 위로 출력되게 만들어줌 */
+    font-family: Georgia, 'Times New Roman', Times, serif; /* 로컬 폰트 사용 */
+    /* animation: swing 3000ms infinite alternate; */
+    animation-name: textAni;
+    animation-duration: 3000ms; /*애니메이션 duration까지 선언을 해야 실행됨*/
+    animation-fill-mode: forwards; /*애니메이션이 종료 된 후 어느 위치에 있을지 지정*/
+    /* display: inline-block; _transform:translate사용시 */
+}
+/* 메인 */
+.main {
+    background-color: #fff;
+    min-height:450px;
+    display:flex; /* 어떻게 배열할지에 관한 것은 부모 태그에 있어야 합니다.*/
+    flex-direction: row; /* x축으로 정렬 _ 디렉션이 기준 : 메인 */
+    justify-content: space-evenly; /* group1,2,3 사이의 여백을 똑같이 줌 */
+    padding: 30px 0;
+}
+.group1{
+    /* background-color:palevioletred; */
+    width: 250px;
+}
+.group2{
+     background-color: palegoldenrod;
+    width: 380px;
+}
+.group3{
+    background-color:indianred;
+    width: 190px;
+}
+/* 로그인 */
+.login{
+    background-color: #F37335;
+    box-shadow: 5px 5px 0 0 #aaa; /*박스 크기에 영향을 주지 않는다*/
+    padding:10px;
+    border-radius: 5px;
+}
+.login-heading{
+    color:#ff0;
+    font-weight: 700;
+    /* padding-left:10px | margin-left: 10px;*/
+    text-indent: 10px; /* block 요소일때만 사용가능 | 박스 크기에 영향을 주지 않는다 */
+}
+.login-form{
+    background-color: #fff;
+    margin-top: 10px;
+    border-radius: 5px 5px 0 0;
+    padding: 10px;
+}
+.login-form fieldset{
+    border:0;
+    padding: 0;
+    margin:0;
+    background: yellow;
+    position: relative;
+}
+.login-form label{
+    background:lime;
+    width:4em;
+    display: inline-block;
+}
+.login-form input{
+    width: 100px;
+    height:22px;
+}
+.btn-login{
+    width:50px;
+    height: 50px;
+    border:0;
+    padding: 0;
+    margin:0;
+    background-color: hsla(0, 70%, 65%, 1);
+    color: #fff;
+    position: absolute;
+    top:0;
+    right:0;
+}
+/* 슬로건 */
+.slogan {
+    background-color:slateblue;
+    height:10vh;
+}
+/* 푸터 */
+.footer-bg{
+    background-color: purple;
+}
+.footer {
+    background-color: pink;
+    height:10vh;
+}
+
+
