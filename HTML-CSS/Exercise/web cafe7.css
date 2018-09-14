@@ -352,19 +352,41 @@ content:"원하는 출력값" 을 꼭 적어주어야함 _ 출력값엔 아무�
 }
 .login-form input{
     width: 100px;
-    height:22px;
+    height: 22px;
 }
 .btn-login{
     width:50px;
     height: 50px;
-    border:0;
-    padding: 0;
-    margin:0;
-    background-color: hsla(0, 70%, 65%, 1);
+    border:0;       /* 브라우저마다 에이전트스타일값이 있어 꼭 m.p.b같은 기본적인 값을 0으로 지정해주어야함 */
+    padding: 0; 
+    margin:0; 
+    background-color: #F37335;
     color: #fff;
     position: absolute;
     top:0;
     right:0;
+    border-radius: 3px;
+}
+.sign{
+    background-color: #fff;
+    border-radius: 0 0 5px 5px;
+    padding: 2px 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.sign li::before {
+    content: "g";
+    font-family: "webcafeIcon";
+    position: relative;
+    top: 2px;
+    color: #F37335;
+
+}
+.sign a{
+    display: inline-block;
+    letter-spacing: -1px; /* 자간 조정 | 본문내용일 경우엔 가독성이 떨어져 비추 */
+    padding: 8px 0;
 }
 /* 슬로건 */
 .slogan {
