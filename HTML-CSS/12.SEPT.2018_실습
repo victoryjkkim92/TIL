@@ -67,13 +67,49 @@
           </ul>
         </nav>
         <main class="main">
+          <div class="group1">
             <section class="recommend-book">
-                <!-- (선택) 내용을 채워 주세요. -->
-            </section>
-            <section class="news">
-                <!-- (선택)내용을 채워 주세요. -->
+                <img src="images/webcafe_book.svg" width="70" height="70">
+                <h2 class="recommend-book-heading">추천 서적
+                <span class="en-heading">Recommend Book</span>
+                </h2>
+                <figure class="recommend-book-cover">
+                  <img src="images/book_rwd.jpg" width="240" height="auto" alt="추천도서">
+                  <figcaption>반응형웹 핵심 가이드북 도서</figcaption>
+                </figure>
+                <dl class="recommend-book-detail">
+                  <dt class="recommend-book-author">저자</dt>
+                  <dd class="recommend-book-author-name">김데레사</dd>
+                  <dd class="recommend-book-grade">&#9733; &#9733; &#9733; &#9733; &#9734;</dd>
+                </dl>
+                <p>반응형웹 디자인을 위한 핵심 내용을 다루고 있으며 미디어쿼리, 유연한 레이아웃, 반응형 이미지 기법을 학습할 수 있다. 모바일 및 다양한 해상도에 대응이 가능한 웹디자인을 이 책으로 시작해 보자!</p>
             </section>
             <section class="board">
+                <img src="images/webcafe_board.svg" width="70" height="auto" alt="게시판">
+                <h2 class="board-heading">게시판
+                <span class="en-heading-board">Webcafe Board</span>
+                </h2>
+                <ul class="board-list">
+                  <li class="icon-star"><a href="#">HTML의 모든 것을 알려주마 샘플 활용법</a>
+                  <time datetime="2018-9-15T12:34:12">2018.09.15</time>
+                  </li>
+                  <li class="icon-star"><a href="#">W3C 사이트 리뉴얼 및 공지사항</a>
+                  <time datetime="2018-9-15T12:34:12">2018.09.15</time>
+                  </li>
+                  <li class="icon-star"><a href="#">KWCAG 2.1소식</a>
+                  <time datetime="2018-9-15T12:34:12">2018.09.15</time>
+                  </li>
+                  <li class="icon-star"><a href="#">서버 점검으로 인한 사이트 이용안내 입니다.</a>
+                  <time datetime="2018-9-15T12:34:12">2018.09.15</time>
+                  </li>
+                  <li class="icon-star"><a href="#">여러분들이 생각하는 웹 접근성에 대해 이야기를 나누어 봅시다.</a>
+                  <time datetime="2018-9-15T12:34:12">2018.09.15</time>
+                  </li>
+                </ul>
+            </section>
+          </div>
+          <div class="group2">
+            <section class="news">
                 <!-- (선택)내용을 채워 주세요. -->
             </section>
             <section class="favorite-site">
@@ -82,6 +118,7 @@
             <article class="twitter">
                 <!-- (선택)내용을 채워 주세요. -->
             </article>
+          </div>
         </main>
         <article class="slogan">
             <!-- (선택)내용을 채워 주세요. -->
@@ -92,3 +129,9 @@
     </div>
 </body>
 </html>
+
+
+-----
+
+
+/* <main>태그 안에 group을 두개 만들고 group1엔 section 두개 (recommend-book, board)| group2엔 section 세개 (news, favorite-site, twitter)로 나눔*/
