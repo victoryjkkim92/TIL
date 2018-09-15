@@ -102,3 +102,102 @@ text-align: right;
 .sub-menu li:hover{
   color: yellow;
 }
+
+/* 메인 */
+.main{
+  /* background:indianred; */
+  width: 1000px;
+  height: auto;
+  margin: 0 auto;
+  display: flex;
+  /* justify-content: row;   */
+}
+/* 그룹 1 */
+.group1{
+  padding-top: 10px;
+  width:30%;
+}
+.recommend-book img{
+  float:left;
+  padding-top: 10px;
+}
+.recommend-book-heading{
+  padding: 10px 0 0 0;
+  font-size:2rem;
+  font-weight: 700;
+}
+.en-heading{
+  display: block;
+  font-size:1.8rem;
+  color: #abd375;
+  font-weight: 700;
+}
+.recommend-book-cover{
+  width: 80%;
+  margin: 20px auto;
+  text-align: center;
+}
+.recommend-book-cover figcaption{
+  font-size: 1.4rem;
+}
+.recommend-book-detail{
+  text-align: center;
+  font-size: 1.4rem;
+}
+.recommend-book-author, .recommend-book-author-name{
+  display: inline-block;
+}
+.recommend-book-grade{
+  color:#abd375;
+}
+.recommend-book  p{
+  line-height: 1.5;
+  font-size: 1.4rem;
+  padding-top: 5px;
+}
+.board{
+  padding-top: 50px;
+}
+.en-heading-board{
+  color: #c7b39a;
+}
+.board img{
+  float:left;
+  padding: 0 5px 0 0;
+}
+.board-heading{
+  font-size: 2rem;
+  font-weight: 700;
+}
+.en-heading-board{
+  display: block;
+}
+li.icon-star::before{
+  content: "\e80e";
+  font-family: "fontello";
+  margin: 0 5px;
+  display: inline-block;
+}
+.board-list a{
+    display: inline-block;
+    width: calc(100% - 8em);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.icon-star::before,.board-list a, .border-list time{
+  vertical-align: middle;
+}
+.board-list{
+  padding:20px 0;
+}
+.board-list li{
+  font-size: 1.4rem;
+  padding: 5px 0;
+}
+
+/* 그룹2 */
+.group2{
+  background: ivory;
+}
+
