@@ -459,65 +459,9 @@ content:"원하는 출력값" 을 꼭 적어주어야함 _ 출력값엔 아무�
 .term-list-brief{
     margin-top: 10px;
 }
-/* .term{
-    background:linear-gradient(to bottom, #aaa, #eee);
-    border: 1px solid #999;
-    border-radius: 15px;
-    margin-top: 15px;
-}
-.term-heading{
-    margin: 10px 0 0 10px;
-    font-weight: 700;
-}
-.term-list{
-    padding: 10px;
-}
-.term-list-thumbnail{
-    display: block;
-    float: left;
-    padding: 5px 0 0 5px;
-}
-.term-list-subject{
-    float: right;
-    width: 145px; 
-    color: darkblue;
-}
-.term-list-brief{
-   float: right;
-   width: 145px; 
-} */
+
 
 /* 검색폼 */
-/* .search{
-    background: #aaa;
-    background: linear-gradient(to bottom, #bbb,#eee);
-    border-radius: 5px 5px 0 0;
-    border: 1px solid #aaa;
-}
-.search-form{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-.search-form fieldset{
-    width: 100%;
-    text-align: center;
-    border: hidden;
-    margin-top: 5px;
-}
-.search-form input, .search-form button{
-    border-radius: 3px;
-    border: 1px solid gray;
-}
-.search-form input{
-    width: 200px;
-}
-.search-form button{
-    background: #aaa;
-    color: #fff;
-    padding: 2px 5px;
-}*/
-
 .search{
     background: #aaa;
     background: linear-gradient(to bottom, #bbb, #eee);
@@ -540,7 +484,7 @@ content:"원하는 출력값" 을 꼭 적어주어야함 _ 출력값엔 아무�
     position: relative;
     top: 2px;
 }
-.search-form input[type="search"]{
+.search-form input[type="search"]{ /* .search-form라는 클래스 이름을 가진 속성 밑 input태그중 type이 search인 것 만 찾기 */
     border: 1px solid #aaa;
     border-radius: 3px;
     padding: 1px 1px 1px 5px;
@@ -571,64 +515,70 @@ content:"원하는 출력값" 을 꼭 적어주어야함 _ 출력값엔 아무�
     border:1px solid #aaa;
     border-radius: 5px 5px 0 0;
     padding: 5px 10px;
-    position: absolute;
-    top: 0; 
+    position: absolute; /* 공지사항 | 자료실 이라는 탭의 위치를 정해줌 */
+    top: 0;     /* position:absolute를 사용했기때문에 좌표를 적어주어야하는데 top은 공통이라 미리 적어줌 */
 }
 .tab-act .tab{
     background: #fff;
     color: #F37335;
     border-color: #F37335 #F37335 #fff #F37335;
+    /* .tab-act 하위 클래스인 .tab(공지사항)탭의 보더크기 색 지정 */
 }
 .notice-heading{
-    left:0;
+    left:0;     /* 공지사항 이라는 글씨의 위치를 조정함 top좌표는 .tab스타일링 할 때 지정해줌 */
 }
 .pds-heading{
-    left: 73px;
+    left: 73px; /* 자료실 이라는 글씨의 위치를 조정함 top좌표는 .tab스타일링 할 때 지정해줌 */
 }
 .notice-list, .pds-list, .notice-more, .pds-notice{
     display: none;
+    /* 공지사항의 목록 | 자료실의 목록들이 눈에 보여지지않게 지정 _ 후에 제이쿼리를 사용해 나타나게 할 예정 */
 }
 .tab-act .notice-list, .tab-act .pds-list,
 .tab-act .notice-more, .tab-act .pds-list{
     display: block;
+    /* li, a 태그는 인라인 요소라 display속성을 바꿔줌 */
 }
 .notice-list, .pds-list{
     padding-top: 45px;
+    /* 리스트들의 위쪽으로 패딩을 45px만큼 줘서 공지사항 | 자료실 탭과 겹치지 않게 배치 */
 }
 .notice-list li, .pds-list li{
-    /* background: olive; */
     margin-bottom: 10px;
+    /* 각 목록들 사이에 간격을 띄어주기 위해 margin-bottom 지정 */
     position: relative;
+    /* a태그와 time태그의 배치를 normal flow에서 시작하기 위해 설정 */
+    
 }
 .notice-list a, .pds-list a{
-    display: block;
-    width:calc(100% - 75px); /* width: 300px; */
+    display: block; /* 원래 a태그는 인라인속성 */
+    width:calc(100% - 75px); /* width: 300px로도 바꿔 쓸 수 있음 */
     white-space: nowrap;  /* 블록의 성향을 가진 요소에서만 쓸 수 있음 */
-    overflow: hidden;
-    text-overflow: ellipsis;
+    overflow: hidden;  /* 문장이 길어 튀어나가보이는 부분을 감춰주기위한 속성 */
+    text-overflow: ellipsis; /* 튀어나가보이는 부분의 스타일링을  ... 이런식으로 보여줌 */
 }
 .notice-list a::before, .pds-list a::before{
-    content: "b";
+    content: "b";               /* 리스트들 앞에 불릿기호를 삽입 */
     font-family: "WebcafeIcon";
-    position: relative;
-    top: 2px;
+    position: relative;     
+    top: 2px;           /* 불릿기호가 살짝 아래로 떨어지는 느낌이라 높이조정해줌 */
 }
 .notice-list time, .pds-list time{
-    position: absolute;
+    position: absolute;     /* 속해있는 위치에서 top 0, right 0; 이니까 오른쪽 상단에 위치시킴 */
     top: 0;
     right: 0;
 }
 .notice-more, .pds-more{
-    position: absolute;
-    top: 0;
+    position: absolute; 
+    top: 0;             /* 더보기라는 부분의 위치를 조정해줌 */
     right: -8px;
     padding: 8px;
 }
 .notice-more::before, .pds-more::before{
     content: "p";
     font-family: "WebcafeIcon";
-    position: relative;
-    top: 2px;
+    position: relative;             /* 더보기 앞에 +아이콘 삽입  | 기준은 더보기 글씨 앞*/
+    top: 2px;                       
     color: #0f0;
 }
 
