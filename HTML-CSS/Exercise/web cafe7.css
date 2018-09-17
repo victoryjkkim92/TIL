@@ -557,6 +557,84 @@ content:"원하는 출력값" 을 꼭 적어주어야함 _ 출력값엔 아무�
     background: #333;
     height: 22px;
 }
+/* 공지사항 | 자료실 */
+
+.board{
+    margin-top: 20px;
+    position: relative; 
+}
+.tab{
+    cursor: pointer;
+    background: #aaa;
+    background: linear-gradient(to bottom, #bbb, #eee);
+    color: #333;
+    border:1px solid #aaa;
+    border-radius: 5px 5px 0 0;
+    padding: 5px 10px;
+    position: absolute;
+    top: 0; 
+}
+.tab-act .tab{
+    background: #fff;
+    color: #F37335;
+    border-color: #F37335 #F37335 #fff #F37335;
+}
+.notice-heading{
+    left:0;
+}
+.pds-heading{
+    left: 73px;
+}
+.notice-list, .pds-list, .notice-more, .pds-notice{
+    display: none;
+}
+.tab-act .notice-list, .tab-act .pds-list,
+.tab-act .notice-more, .tab-act .pds-list{
+    display: block;
+}
+.notice-list, .pds-list{
+    padding-top: 45px;
+}
+.notice-list li, .pds-list li{
+    /* background: olive; */
+    margin-bottom: 10px;
+    position: relative;
+}
+.notice-list a, .pds-list a{
+    display: block;
+    width:calc(100% - 75px); /* width: 300px; */
+    white-space: nowrap;  /* 블록의 성향을 가진 요소에서만 쓸 수 있음 */
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.notice-list a::before, .pds-list a::before{
+    content: "b";
+    font-family: "WebcafeIcon";
+    position: relative;
+    top: 2px;
+}
+.notice-list time, .pds-list time{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.notice-more, .pds-more{
+    position: absolute;
+    top: 0;
+    right: -8px;
+    padding: 8px;
+}
+.notice-more::before, .pds-more::before{
+    content: "p";
+    font-family: "WebcafeIcon";
+    position: relative;
+    top: 2px;
+    color: #0f0;
+}
+
+/* .board [class$="list"]{   /* $클래스 값이 []로 끝나는 속성선택자 
+} */
+
 /* 슬로건 */
 .slogan {
     background-color: lightcoral;
