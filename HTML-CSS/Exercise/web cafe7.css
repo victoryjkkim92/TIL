@@ -312,7 +312,6 @@ content:"원하는 출력값" 을 꼭 적어주어야함 _ 출력값엔 아무�
     width: 250px;
 }
 .group2{
-     background-color: palegoldenrod;
     width: 380px;
 }
 .group3{
@@ -426,6 +425,137 @@ content:"원하는 출력값" 을 꼭 적어주어야함 _ 출력값엔 아무�
   line-height: 30px;
   text-indent: 45px;
   background: url("images/validation_icon.png") no-repeat 20px 50%, linear-gradient(to bottom, #aaa, #eee);
+}
+
+/* 웹 관련 용어 */
+.term{
+    margin-top: 20px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    padding: 10px 15px;
+    background: #aaa;
+    background: linear-gradient(to bottom, #bbb,#eee);
+}
+.term-heading{
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+.term-list{
+    margin-top: 10px;
+}
+.term-list-subject, .term-list-brief{
+    width: 145px;
+    float: right;
+}
+.term-list-subject{
+    color: #296897;
+}
+.term-list-thumbnail{
+    float: left;
+}
+.term-list-thumbnail img{
+    display: block;     /* 이미지 자체는 인라인 요소이고 baseline에 지정되어있기 대문에 밑에 gap이 생김*/
+}
+.term-list-brief{
+    margin-top: 10px;
+}
+/* .term{
+    background:linear-gradient(to bottom, #aaa, #eee);
+    border: 1px solid #999;
+    border-radius: 15px;
+    margin-top: 15px;
+}
+.term-heading{
+    margin: 10px 0 0 10px;
+    font-weight: 700;
+}
+.term-list{
+    padding: 10px;
+}
+.term-list-thumbnail{
+    display: block;
+    float: left;
+    padding: 5px 0 0 5px;
+}
+.term-list-subject{
+    float: right;
+    width: 145px; 
+    color: darkblue;
+}
+.term-list-brief{
+   float: right;
+   width: 145px; 
+} */
+
+/* 검색폼 */
+/* .search{
+    background: #aaa;
+    background: linear-gradient(to bottom, #bbb,#eee);
+    border-radius: 5px 5px 0 0;
+    border: 1px solid #aaa;
+}
+.search-form{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.search-form fieldset{
+    width: 100%;
+    text-align: center;
+    border: hidden;
+    margin-top: 5px;
+}
+.search-form input, .search-form button{
+    border-radius: 3px;
+    border: 1px solid gray;
+}
+.search-form input{
+    width: 200px;
+}
+.search-form button{
+    background: #aaa;
+    color: #fff;
+    padding: 2px 5px;
+}*/
+
+.search{
+    background: #aaa;
+    background: linear-gradient(to bottom, #bbb, #eee);
+    border: 1px solid #aaa;
+    border-bottom: 0;
+    border-radius: 15px 15px 0 0;
+    padding: 15px 25px;
+}
+.search-form fieldset{
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+.search-form fieldset *{
+    vertical-align: middle;
+}
+.search-form label::before{
+    content: "z";
+    font-family: "WebcafeIcon";
+    position: relative;
+    top: 2px;
+}
+.search-form input[type="search"]{
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    padding: 1px 1px 1px 5px;
+    height: 22px;
+    width: 200px;
+    margin: 0 5px 0 4px;
+}
+.btn-search{
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    padding: 0 10px;
+    font-size: 1.3rem;
+    color: #fff;
+    background: #333;
+    height: 22px;
 }
 /* 슬로건 */
 .slogan {
