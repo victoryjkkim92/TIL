@@ -584,6 +584,72 @@ content:"원하는 출력값" 을 꼭 적어주어야함 _ 출력값엔 아무�
 
 /* .board [class$="list"]{   /* $클래스 값이 []로 끝나는 속성선택자 
 } */
+/* 새소식 */
+
+.news{
+    /* background: yellow; */
+    margin-top: 20px;
+    position: relative;
+}
+.news::before{
+    content: "";
+    position: absolute;
+    top: 35px;
+    left: 0;
+    width: 80%;
+    height: 1px;
+    background: #aaa;
+    background: linear-gradient(to right, #aaa, #fff);
+}
+.news-heading{
+    font-weight: 700;
+    color: #F37335;
+    font-size: 1.5rem;
+}
+.news-article{
+    display: block;
+    margin-top: 35px;
+}
+.news-item{
+    /* background: pink; */
+    padding-left: 130px;
+    position: relative;
+}
+.news-item-heading{
+    font-weight: 700;
+}
+.news-item-brief{
+    margin-top: 10px;
+    text-align: justify;  /* 텍스트 양쪽 정렬 : word-spacing값을 적용 */
+}
+.news-item-thumbnail{
+    /* background: lime; */
+    position: absolute;
+    top: 5px;    /* .news-item에 있는 글씨와 높이가 안맞아보이기때문에 조절함 */
+    left: 0;
+    text-align: center;
+}
+.news-item-thumbnail img{
+    margin-bottom: 15px;
+    box-shadow: 0 15px 25px 0 #aaa;
+}
+
+.news-more::before{
+    content: "p";
+    font-family: "webcafeIcon";
+    position: relative;
+    top: 2px;
+    color: #00ff22;
+}
+.news-more{
+    /* background: orange; */
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    padding: 8px;
+}
+
+
 
 /* 슬로건 */
 .slogan {
