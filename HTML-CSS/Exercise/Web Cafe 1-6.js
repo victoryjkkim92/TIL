@@ -29,6 +29,14 @@ tab.on('click focusin',function(){
     $(this).parent().addClass('tab-act');
 });
 
+// 변수로 선언해준 tab부분에 click이나 focusin이라는 이벤트가 일어났을 떄, 
+// 1. 선택된 this의(이벤트가 일어난 부분) 부모요소와 형제관계에 있는 요소를 찾아, 
+//'tab-act'를 삭제한다.
+// 2. 선택된 this의 (이벤트가 일어난 부분) 부모요소에 'tab-act'라는 클래스를 추가해준다
+
+
+
+
 // 관련사이트 목록 에니메이션을 위한 함수
 
 // list.hover(function(){
@@ -44,11 +52,34 @@ list.on('mouseout focusout', function () {
 });
 
 
+// 관련사이트 목록 에니메이션을 위한 함수
 
-// 변수로 선언해준 tab부분에 click이나 focusin이라는 이벤트가 일어났을 떄, 
-// 1. 선택된 this의(이벤트가 일어난 부분) 부모요소와 형제관계에 있는 요소를 찾아, 
-//'tab-act'를 삭제한다.
-// 2. 선택된 this의 (이벤트가 일어난 부분) 부모요소에 'tab-act'라는 클래스를 추가해준다
+// list.hover(function(){
+//     $(this).toggleClass('related-act');
+// });
+
+
+// What is toggleClass?
+//The toggleClass() method toggles 
+//between adding and removing one or more class names
+// from the selected elements.
+
+
+list.on('mouseover focusin', function () {
+    $(this).addClass('related-act');
+});
+
+// 변수로 선언해준 list부분에 mouseover이나 focusin이 일어났을 경우,
+// 선택된 this의(이벤트가 일어난 부분)에 'related-act'라는 클래스를 더해준다.
+
+list.on('mouseout focusout', function () {
+    $(this).removeClass('related-act');
+});
+
+// 변수로 선언해준 list부분에 mouseout이나 focusout이 일어났을 경우,
+// 선택된 this의(이벤트가 일어난 부분)에 'related-act'라는 클래스를 제거한다.
+
+
 
 
 
