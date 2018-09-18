@@ -649,6 +649,67 @@ content:"원하는 출력값" 을 꼭 적어주어야함 _ 출력값엔 아무�
     padding: 8px;
 }
 
+/* 신규이벤트 및 관련사이트 */
+
+.event-related{
+    background: #bbb;
+    background: linear-gradient(to bottom, #bbb,#eee);
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    padding: 10px;
+}
+.event{
+    position: relative;
+}
+.event-heading, .related-heading{
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+.event-heading span, .related-heading span{
+    color: #F37335;
+
+}
+.event-thumbnail, .event-brief{
+    margin: 10px 0;
+
+}
+.event-thumbnail img{
+    box-shadow: 5px 5px 0 0 #aaa;
+    border: 1px solid #999;
+}
+.btn-event{
+    height: 20px;
+    overflow: hidden; 
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.btn-event-prev, .btn-event-next{
+    float: left;
+    cursor: pointer;
+    width: 19px;
+    height: 0;
+    padding-top:18px;
+    border: 0;
+    background: transparent url("images/back_forward.png") no-repeat;
+}
+.btn-event-prev:focus, .btn-event-next:focus{
+    /* focus를 받았을 때 선택되는 부분의 선색과 영역을 지정 */
+    outline: 1px solid blue;
+    outline-offset: -4px;
+}
+.btn-event-next{
+    background-position:  100% 0;
+    margin-left: 5px;
+}
+.related{
+    border-top: 1px solid #aaa;
+    padding-top: 10px;
+}
+.related-list{
+    background: #fff;
+    margin-top: 10px;
+}
 
 
 /* 슬로건 */
