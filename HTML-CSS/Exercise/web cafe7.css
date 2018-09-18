@@ -709,7 +709,26 @@ content:"원하는 출력값" 을 꼭 적어주어야함 _ 출력값엔 아무�
 .related-list{
     background: #fff;
     margin-top: 10px;
+    height: 25px;
+    line-height: 25px;
+    overflow: hidden;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+    transition: height 0.5s 0s, background 0.5s 0.5s;  /* 숨겨진 리스트가 보여지는 속도를 조절 */
 }
+/* 스크립트로도 동작하게 할 수 있음 js파일 참고 */
+/* .related-list:hover, .related-list:focus{ 
+    height: 130px;          
+    background: pink;
+} */
+
+.related-act{
+    height: 130px;
+    background: #F37335;
+}
+
+
+
 
 
 /* 슬로건 */
