@@ -584,12 +584,14 @@ content:"원하는 출력값" 을 꼭 적어주어야함 _ 출력값엔 아무�
 
 /* .board [class$="list"]{   /* $클래스 값이 []로 끝나는 속성선택자 
 } */
+
+
 /* 새소식 */
 
 .news{
     /* background: yellow; */
-    margin-top: 20px;
-    position: relative;
+    margin-top: 20px;      /* 공지사항|자료실 영역과 새소식 사이에 공간을 주기 위함 */
+    position: relative;         /* 새소식 밑에 있는 회색 장식부 & 더하기 부분이 .news를 기준으로 position:absolute; */
 }
 .news::before{
     content: "";
@@ -601,19 +603,18 @@ content:"원하는 출력값" 을 꼭 적어주어야함 _ 출력값엔 아무�
     background: #aaa;
     background: linear-gradient(to right, #aaa, #fff);
 }
-.news-heading{
-    font-weight: 700;
-    color: #F37335;
+.news-heading{      /* 새소식이라는 글씨 스타일링 */
+    font-weight: 700;       
+    color: #F37335;     
     font-size: 1.5rem;
 }
-.news-article{
+.news-article{              /* 링크태그로 감싸진 부분을 블럭요소로 바꿔줌 */
     display: block;
-    margin-top: 35px;
+    margin-top: 35px;       /* 새소식이라는 글씨와 뉴스사이의 공간확보 */
 }
 .news-item{
-    /* background: pink; */
-    padding-left: 130px;
-    position: relative;
+    padding-left: 130px;        /* .news-thumbnail의 오른쪽에 적절하게 배치 */
+    position: relative;         /* .news-thumbnail의 위치를 지정해주기위함 */
 }
 .news-item-heading{
     font-weight: 700;
@@ -623,26 +624,56 @@ content:"원하는 출력값" 을 꼭 적어주어야함 _ 출력값엔 아무�
     text-align: justify;  /* 텍스트 양쪽 정렬 : word-spacing값을 적용 */
 }
 .news-item-thumbnail{
-    /* background: lime; */
     position: absolute;
     top: 5px;    /* .news-item에 있는 글씨와 높이가 안맞아보이기때문에 조절함 */
     left: 0;
-    text-align: center;
+    text-align: center;  /* 아래의 figcaption과의 중간정렬ㄴ */
 }
 .news-item-thumbnail img{
-    margin-bottom: 15px;
+    margin-bottom: 20px; /* 그림자 효과를 줄 때 겹치지 않게하기 위함 */
     box-shadow: 0 15px 25px 0 #aaa;
+    /* 박스 쉐도우 : 첫번째값_0, 두번째 값_15px만큼 아래쪽, 
+                    세번쨰 값_25px만큼 그림자가 둥글게 보임, 네번째 값_0
+                    그림자 색은 #aaa */
 }
+/* 
 
-.news-more::before{
+box-shadow : 
+
+첫번째 값 : 값이 양수 이면 그림자가 박스의 오른쪽으로, 음수이면 박스의 왼쪽
+1. The horizontal offset of the shadow, 
+positive means the shadow will be on the right of the box, 
+a negative offset will put the shadow on the left of the box.
+
+두번째 값 : 값이 음수이면 박스의 위쪽으로, 값이 양수이면 박스의 아래쪽
+2. The vertical offset of the shadow, 
+a negative one means the box-shadow will be above the box, 
+a positive one means the shadow will be below the box.
+
+세번째 값 : 그림자번짐의 둥금정도(선택사항)
+3. The blur radius (optional), 
+if set to 0 the shadow will be sharp, 
+the higher the number, the more blurred it will be.
+
+네번째 값: 그림자 퍼짐의 둥금정도(선택사항) 
+4. The spread radius (optional), 
+positive values increase the size of the shadow, 
+negative values decrease the size. Default is 0 
+(the shadow is same size as blur).
+
+다섯번째 값 : 색상
+5. Color
+*/
+
+.news-more::before{  /* 더보기 앞에 플러스모양 아이콘 삽입 */
     content: "p";
     font-family: "webcafeIcon";
     position: relative;
     top: 2px;
     color: #00ff22;
 }
+
 .news-more{
-    /* background: orange; */
     position: absolute;
     top: -8px;
     right: -8px;
