@@ -780,20 +780,151 @@ display: block;
 
 
 
+/* 인기사이트 */
+.favorite{
+    position: relative; /* + 더하기 부분위치 조정*/
+    margin-top: 20px; /* 신규이벤트 | 관련사이트 부분 사이에 여백을 줌 */
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    background: #aaa;
+    background: linear-gradient(to bottom, #bbb, #eee);
+    padding: 10px;  
+}
+.favorite-list{
+    /* list-style: none; 웹접근성때문에 이렇게 사용해선 안됨 */
+    overflow: hidden;
+    counter-reset: number;
 
+}
+.favorite-list li{
+    margin-top: 10px;
+    counter-increment: number;
+    position: relative;
+    /* display: flex;
+    justify-content: space-between; */
+}
+.favorite-list li::before{
+    content: counter(number);
+    /* 가상요소에 보여지는 부분이 숫자라고 지정 */
+    background: #aaa;
+    color: #fff;
+    padding: 0 6px;
+    border-radius: 3px;
+    margin-right: 5px;
+    display: inline-block;
+    width: 18px;
+    text-align: center;
+}
+.up, .stop, .down{
+    position: absolute;    /* .favorite-list가 기준 */
+    right: 0;
+    top: 20%;
+    /* 배경이미지 삽입 */
+    background: url(images/rank.png) no-repeat;
+    /* 남아있는 영역을 em이 사용할 수 있게 해줌 */
+    /* margin-left: auto; */
+    /* flex의 item이 되면서 width와 height줄 수 있음 */
+    width: 9px;
+    height: 11px;
+    /* 사용할 배경이미지에 너비 | 높이 값 지정해서 보여지는 부분 조절 */
+    text-indent:10px;
+    /* 10px만큼 들여쓰기조 */
+    white-space: nowrap;
+    /* 지정해준 크기 보다 컨텐츠가 크면 튀어나감 */
+    overflow: hidden;
+    /* margin-top: 4px; li의 글씨크기가 커지면 다시 조절해줘야함 */
+    /* transform: translateY(-50%);  */
+    /*자기상자의 절반만큼 내려감*/
+}
+.stop{
+    background-position: 0 50%;
+}
+.down{
+    background-position: 0 100%;
+}
+.favorite-more{
+    position: absolute;  /* .favorite 부분에 기준  : section 전체 부분 */
+    top: 2px;
+    right: 2px;
+    padding: 8px;
+}
 
 /* 슬로건 */
-.slogan {
-    background-color: lightcoral;
-    height:10vh;
+.slogan{
+    padding: 10px 100px 10px 150px;
+    position: relative;
 }
+.slogan-heading{
+    width: 110px;
+    height: 83px;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    position: absolute;
+    left: 25px;
+    bottom: -25px;
+    text-align: center;
+    line-height: 83px;
+}
+.slogan-heading::before{
+    background:url("images/coffee.png") no-repeat;
+    content:"";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.slogan-content{
+    color: #DBBE93;
+    font-size: 1.5rem;
+}
+.slogan-content q::before{
+    font-size: 3rem;
+    position: relative;
+    top: 10px;
+}
+.slogan-content q::after{
+    content: "";
+}
+
+
 /* 푸터 */
+
 .footer-bg{
-    background-color: pink;
+    background: #aaa;
+    background: linear-gradient(to bottom, #bbb 0%, #eee 40%, #fff 60%, #fff 100%);
 }
 .footer {
-    background-color: floralwhite;
-    height:10vh;
+    padding: 15px 150px;
+    position: relative;
+}
+.footer-logo{
+    position: absolute;
+    top: 30px;
+    left: 40px;
+}
+.guide-list{
+    color: #fff;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    padding: 10px 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 1px solid #bbb;
+    border-radius: 10px;
+    background: #7B8385;
+    margin-bottom: 15px;
+}
+.guide-list a{
+    padding: 10px 0;
+    /* 위아래로 여백을 주는 효과와 함께 링크 걸릴 부분을 넓여줌 */
+}
+.badge{
+    position: absolute;
+    top: 15px;
+    right: 50px;
 }
 
 
