@@ -1,0 +1,61 @@
+@charset "utf-8";
+
+body{
+    /* background: papayawhip; */
+    margin: 0;
+}
+/* 그리드 컨테이너 */
+
+.container{
+    height: 100vh;
+    display: grid;
+     grid-template-areas: "header header header header header header header header sidebar sidebar sidebar sidebar"
+                          "main main main main main main main main . . . ."
+                          "main main main main main main main main footer footer footer footer ";
+    grid-template-rows: 100px 1fr 100px; 
+    grid-template-columns: repeat(12, 60px);
+    grid-column-gap: 20px;
+    justify-content: center;
+    background: silver;
+    position: relative;
+}
+
+.container::before{
+    content: "";
+    position: absolute;
+    top:0;
+    left:50%;
+    transform: translate(-50%);
+    width: 940px;
+    height: 100%;
+    background: repeating-linear-gradient(90deg, rgba(0,0,255,0.2),rgba(0,0,255,0.2) 60px, transparent 60px, transparent 80px);
+}
+
+/* 헤더 */
+.header{
+    background: lightblue;
+    /* grid-column: 1 / span 8; */
+    grid-area: header;
+}
+
+/* 메인 */
+.main{
+    background:lightgoldenrodyellow;
+    /* grid-column: 1 / span 12; */
+    grid-area: main;
+}
+
+/* 사이드 */
+.sidebar{
+    background: olive;
+    /* grid-column: 9 / span 4;
+    grid-row: 1; */
+    grid-area: sidebar;
+}
+
+/* 푸터 */
+.footer{
+    background: firebrick;
+    /* grid-column: 1 / span 12; */
+    grid-area: footer;
+}
