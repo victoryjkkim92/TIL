@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>고해상도 콘텐츠 이미지</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        .rwd-container{
+            width: 20%;
+            background: pink;
+        }
+        .rwd-srcset-img{
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- 이미지 삽입할 떄 보통 wrapping 사용해요 -->
+    <div class="rwd-container">
+        <img class="rwd-srcset-img" src="../images/image-src.png" alt="고해상도 콘텐츠 이미지 예시" 
+        srcset="../images/image-1x.png 1x,
+            ../images/image-2x.png 2x,
+            ../images/image-3x.png 3x,
+            ../images/image-4x.png 4x">
+        <!-- srcset 속성 : 익스플로러11는 지원안함
+        caniuse.com가서 polyfill같은 기능 다운로드받아서 적용하면 사용가능 -->
+    </div>
+</body>
+</html>

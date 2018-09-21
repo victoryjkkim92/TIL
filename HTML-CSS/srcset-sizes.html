@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>고해상도 콘텐츠 이미지</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        .rwd-container{
+            /* width: 20%; */
+            background: pink;
+        }
+        .rwd-srcset-img{
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- 이미지 삽입할 떄 보통 wrapping 사용해요 -->
+    <div class="rwd-container">
+        <img class="rwd-srcset-img" src="../images/normal.jpg" alt="고해상도 콘텐츠 이미지 예시" 
+        srcset="../images/small.jpg 550w,
+            ../images/medium.jpg 1024w,
+            ../images/large.jpg 1600w" sizes="(max-width: 999px, 50vw, 100vw)">
+        <!-- 뒤쪽편에 숫지w는 이미지크기를 의미
+            sizes 속성  -->
+    </div>
+</body>
+</html>

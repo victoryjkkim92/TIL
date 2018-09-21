@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>반응형 비디오 콘텐츠</title>
+    <style>
+    body{
+        margin: 0;
+    }
+    .rwd-container{
+        width: 50%;
+        background: yellow;
+    }
+    .rwd-video{
+        width: 100%;
+        height: auto;
+    }
+    </style>
+</head>
+<body>
+    <div class="rwd-container">
+        <video class="rwd-video" autoplay controls poster="../media/poster.jpg" mute>
+            <!-- controls 재생버튼 추가 -->
+            <!-- autoplay라는 속성은 가급적 사용하지 않는게 좋음 : 스크린리더(웹접근성) 
+            만약, autoplay를 꼭 쓰고싶다면 mute라는 속성도 써줘요-->
+            <source src="../media/stories.mp4">
+            <track src="../media/stories-en.vtt" kind="captions" srclang="en" label="English">
+            <!-- MDN vtt파일 사용해서 자막만들기-->
+            <a href="../media/stories.mp4">구글 개발자 이야기</a>
+            <!-- fallback으로 깔아줌 | 비디오 태그를 지원하지 않는 브라우저 -->
+        </video>
+    </div>
+</body>
+</html>
