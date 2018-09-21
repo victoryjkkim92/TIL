@@ -1,0 +1,149 @@
+@charset "utf-8";
+
+/* 스타일 초기화 */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+/*fieldset,*/ form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video /* * : 전체선택자*/ {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 1em;
+    font: inherit;
+    vertical-align: baseline;
+}
+li, a { 
+    text-decoration:none;
+}
+
+/* 레이아웃 */
+.container {
+    height: 100vh;
+    width: auto;
+    margin:0 auto;
+    background: #fff;
+    display: grid;
+    grid-template-columns: repeat(12, 60px);
+    grid-template-rows: 100px 10% 30% 30% 10% 10%;
+    justify-content: center;
+    grid-gap: 20px;
+}
+.header {
+    background: olive;
+    grid-column: 1 / span 12;
+}
+.navigation {
+    background: darkcyan;
+    grid-column: 1 / span 12;
+}
+.book {
+    background: sandybrown;
+    grid-column: 1 / span 4;
+}
+.news {
+    background: lightcoral;
+    grid-column: 5 / span 8;
+}
+.board {
+    background: orange;
+    grid-column: 1/ span 4;
+}
+.twitter {
+    background: yellowgreen;
+    grid-column:  5 / span 4; 
+}
+.favorite {
+     background: darkkhaki;
+     grid-column: 9 /span 4;
+}
+.slogan {
+    background: purple;
+    grid-column: 1 / span 12;
+}
+.footer {
+     background: peachpuff;
+     grid-column: 1/ span 12;
+}
+
+/* 헤더 */
+.header{
+    position: relative;
+}
+.logo{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+.member{
+    text-align: right; 
+    padding: 10px;
+}
+.member li:nth-child(n+2)::before{
+    content: "|";
+    padding: 0 10px;
+}
+.member li{
+    display: inline-block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 모바일 및 태블릿 디바이스 */
+@media screen and (max-width: 999px) {
+  .container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 10% 10% 1fr 1fr 1fr 1fr 1fr 10% 10%;
+  }
+  .header {
+    grid-column: 1;
+  }
+  .navigation {
+    grid-column: 1;
+  }
+  .book {
+    grid-column: 1;
+  }
+  .news {
+    grid-column: 1;
+  }
+  .board {
+    grid-column: 1;
+  }
+  .favorite {
+    grid-column: 1;
+  }
+  .twitter {
+    grid-column: 1;
+  }
+  .slogan {
+    grid-column: 1;
+  }
+  .footer {
+    grid-column: 1;
+  }
+}
