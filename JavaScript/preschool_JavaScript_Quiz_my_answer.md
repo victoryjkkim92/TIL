@@ -7,9 +7,9 @@
 ```
 function larger(x, y) {
   if ( x > y ) {
-  return x
+  return x;
   } else {
-      return y
+      return y;
   }
  }
  // 함수 larger 선언,  만약 x가 y보다 크면 x를 반환하고 그게 아니면 y를 반환해라.
@@ -38,16 +38,18 @@ throw new Error('입력값이 잘못되었습니다.');
 printEvenOdd(5) // 출력: '5: 홀수' printEvenOdd(10) // 출력: '10: 짝수' 
 
  ```
- function printEvenOdd(num) { 
+function printEvenOdd(num) { 
   if ( num % 2 == 0 ) 
-  { return "짝수" } 
-  else { return "홀수" } }
+  { return "짝수";
+   } else { return "홀수";
+} }
+
   
 // 2로 나누었을때 나머지가 0이면 "짝수"출력,
 // 아니면 "홀수"출력
 
-printEvenOdd(5) // 출력: '5: 홀수'
-printEvenOdd(10) // 출력: '10: 짝수'
+printEvenOdd(5); // 출력: '5: 홀수'
+printEvenOdd(10); // 출력: '10: 짝수'
  ```
 
 # 문제 3-1 
