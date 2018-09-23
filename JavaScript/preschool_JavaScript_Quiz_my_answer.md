@@ -108,6 +108,19 @@ printLargerFirst(5, 15, -2) // 출력: 15, 5, -2
 
 insensitiveEqual('hello', 'hello'); // 반환값: true insensitiveEqual('hello', 'Hello'); // 반환값: true insensitiveEqual('hello', 'world'); // 반환값: false
 
+```
+function insensitiveEqual(srt1,srt2){
+  return srt1.toLowerCase() === srt2.toLowerCase();
+}
+
+insensitiveEqual('hello', 'hello'); // 반환값: true 
+
+insensitiveEqual('hello', 'Hello'); // 반환값: true 
+
+insensitiveEqual('hello', 'world'); // 반환값: false
+
+```
+
 # 문제 6 
 
 이메일 주소를 입력받아, 아이디 부분을 별표(*)로 가린 새 문자열을 반환하는 함수(hideId)를 작성하세요.
