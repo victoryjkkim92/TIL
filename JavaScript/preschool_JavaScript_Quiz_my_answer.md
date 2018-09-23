@@ -100,6 +100,26 @@ insensitiveEqual('hello', 'hello'); // 반환값: true insensitiveEqual('hello',
 
 hideId('ksh@fastcampus.co.kr') // 반환값: '***@fastcampus.co.kr'
 
+```
+function hideld (x){
+  const arr = x.split('@');
+  console.log(arr);
+  const arrSecond = arr[1];
+  
+  const arr2 = arr[0].split('');
+  
+  console.log(arr2);
+  
+  const arr3 = '*'.repeat(arr2.length);
+  
+  console.log(arr3);
+  
+  return arr3+'@'+arrSecond;
+}
+
+hideld('ksh@fastcampus.com');
+```
+
 # 문제 7 
 
 숫자로만 이루어진 문자열을 입력받아, 연속된 두 짝수 사이에 하이픈(-)을 끼워넣은 문자열을 반환하는 함수(insertHyphen)를 작성하세요.
