@@ -12,9 +12,9 @@ function larger(x, y) {
       return y;
   }
  }
- // 함수 larger 선언,  만약 x가 y보다 크면 x를 반환하고 그게 아니면 y를 반환해라.
  larger(4, 12);
- // return 12
+ 
+ larger(4, 12); //반환값 : return 12
  ```
  
 
@@ -37,6 +37,7 @@ function isPositive(x, y, z) {
     throw new Error('입력값이 잘못되었습니다.');
   }
 }
+
 isPositive(1, 2, 10); // 반환값: true 
 
 isPositive(-1, 4, 5); // 반환값: false 
@@ -64,6 +65,7 @@ function printEvenOdd(num) {
 // 아니면 "홀수"출력
 
 printEvenOdd(5); // 출력: 5 '홀수'
+
 printEvenOdd(10); // 출력: 10 '짝수'
  ```
 
@@ -75,7 +77,6 @@ printEvenOdd(10); // 출력: 10 '짝수'
 
 printEvenOdd20();
 
-/* 출력: 1: 홀수 2: 짝수 3: 홀수 4: 짝수 5: 홀수 6: 짝수 7: 홀수 8: 짝수 9: 홀수 10: 짝수 11: 홀수 12: 짝수 13: 홀수 14: 짝수 15: 홀수 16: 짝수 17: 홀수 18: 짝수 19: 홀수 20: 짝수 */
 
 ```
 function printIfEvenOrOdd(i){
@@ -89,6 +90,8 @@ function printIfEvenOrOdd(i){
 for (let i = 1; i<=20; i++){ 
   printIfEvenOrOdd(i);
 }
+
+/* 출력: 1: 홀수 2: 짝수 3: 홀수 4: 짝수 5: 홀수 6: 짝수 7: 홀수 8: 짝수 9: 홀수 10: 짝수 11: 홀수 12: 짝수 13: 홀수 14: 짝수 15: 홀수 16: 짝수 17: 홀수 18: 짝수 19: 홀수 20: 짝수 */
 ```
 
 # 문제 4 
@@ -170,7 +173,32 @@ hideld('ksh@fastcampus.com'); // 반환값: '***@fastcampus.co.kr'
 
 호출 예시:
 
-insertHyphen('1122334455'); // 반환값: '112-2334-455' insertHyphen('437027423'); // 반환값: '4370-274-23'
+insertHyphen('1122334455'); //반환값: '112-2334-455' insertHyphen('437027423'); //반환값: '4370-274-23'
+
+```
+function insertHyphen(num) { 
+var prev='', 
+	newstring='';
+
+	num = num.toString();
+	
+	for (var i=0; i<num.length; i++){
+		parseInt(num[i])%2 == 0 ? current='even' : current='odd';
+		if (current=='odd' && prev=='odd'){
+			newstring=newstring + '-' + num[i];
+			prev='odd';
+		} else {
+			newstring=newstring + num[i];
+		 	prev=current;
+		}
+	}
+  return newstring;          
+}
+
+insertHyphen('1122334455');//반환값: '112-2334-455'
+
+insertHyphen('437027423');// 반환값: '4370-274-23'
+```
 
 # 문제 8 
 
@@ -188,6 +216,7 @@ function range(start, end){
   }
   console.log(arr);
 }
+
 range(3, 6); // 반환값: [3, 4, 5, 6]
 
 range(-4, 0); // 반환값:[-4, -3, -2, -1, 0] 
@@ -227,6 +256,7 @@ randomInteger(1, 7); // 반환값: 1, 2, 3, 4, 5, 6 중 임의의 수 하나
 function randomInteger(min, max) {
   return Math.floor(Math.random() * (7 - 1)) + 1;
 }
+
 randomInteger(1, 7); // 반환값: 1, 2, 3, 4, 5, 6 중 임의의 수 하나
 
 ```
