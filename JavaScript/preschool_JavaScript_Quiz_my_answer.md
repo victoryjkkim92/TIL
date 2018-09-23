@@ -117,7 +117,7 @@ function hideld (x){
   return arr3+'@'+arrSecond;
 }
 
-hideld('ksh@fastcampus.com');
+hideld('ksh@fastcampus.com'); // 반환값: '***@fastcampus.co.kr'
 ```
 
 # 문제 7 
