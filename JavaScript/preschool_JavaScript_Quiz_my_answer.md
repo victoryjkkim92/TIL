@@ -100,19 +100,19 @@ for (let i = 1; i<=20; i++){
 printLargerFirst(5, 15, -2) // 출력: 15, 5, -2
 
 ```
-function sort(x,y,z){
-  if ( x > y ){
-    [x,y]=[y,x]
+function printLargerFirst(x,y,z){
+  if (y > x && y > z) {
+    [x,y] = [y,x];
+  }else if (z > x && z > y) {
+    [x,z]=[z,x];
   }
-  if( y > z){
-     [y,z]=[z,y]
-  }
-   if ( x > y ){
-     [x,y]=[y,z]
+  if (z > y) {
+    [y,z] = [z, y];
   }
   console.log(x,y,z);
 }
-printLargerFirst(5, 15, -2) // 출력: 15, 5, -2
+
+printLargerFirst(5, 15, -2); // 출력: 15, 5, -2
 ```
 
 # 문제 5 
