@@ -116,6 +116,20 @@ insertHyphen('1122334455'); // 반환값: '112-2334-455' insertHyphen('437027423
 
 range(3, 6); // 반환값: [3, 4, 5, 6] range(-4, 0); // 반환값: [-4, -3, -2, -1, 0]
 
+```
+function range(start, end){
+  const arr =[];
+  for (let i=start; i<=end; i++){
+    arr.push(i);
+  }
+  console.log(arr);
+}
+range(3, 6); // 반환값: [3, 4, 5, 6]
+
+range(-4, 0); // 반환값:[-4, -3, -2, -1, 0] 
+
+```
+
 # 문제 9 
 
 수 타입의 값으로만 이루어진 배열 arr를 입력받아, 그 값들의 합을 구하는 함수(sum)를 작성하세요.
