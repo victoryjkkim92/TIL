@@ -25,9 +25,24 @@ function larger(x, y) {
 
 호출 예시:
 
-isPositive(1, 2, 10) // 반환값: true isPositive(-1, 4, 5) // 반환값: false isPositive('열다섯', 10, 2) // 에러: Error: 입력값이 잘못되었습니다. 에러를 발생시키는 코드는 다음과 같습니다.
+isPositive(1, 2, 10) // 반환값: true isPositive(-1, 4, 5) // 반환값: false isPositive('열다섯', 10, 2) // 에러: Error: 입력값이 잘못되었습니다. 에러를 발생시키는 코드는 다음과 같습니다. throw new Error('입력값이 잘못되었습니다.');
 
-throw new Error('입력값이 잘못되었습니다.');
+```
+function isPositive(x, y, z) {
+  if ( x * y * z > 0 ) {
+    return true; 
+  } else if ( x * y * z < 0 ) {
+      return false;    
+  } else {
+    throw new Error('입력값이 잘못되었습니다.');
+  }
+}
+isPositive(1, 2, 10); // 반환값: true 
+
+isPositive(-1, 4, 5); // 반환값: false 
+
+isPositive('열다섯', 10, 2); // 에러: Error: 입력값이 잘못되었습니다. 
+```
 
 # 문제 3 
 
