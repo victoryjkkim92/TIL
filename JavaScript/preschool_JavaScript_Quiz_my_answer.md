@@ -84,6 +84,22 @@ for (let i = 1; i<=20; i++){
 
 printLargerFirst(5, 15, -2) // 출력: 15, 5, -2
 
+```
+function sort(x,y,z){
+  if ( x > y ){
+    [x,y]=[y,x]
+  }
+  if( y > z){
+     [y,z]=[z,y]
+  }
+   if ( x > y ){
+     [x,y]=[y,z]
+  }
+  console.log(x,y,z);
+}
+printLargerFirst(5, 15, -2) // 출력: 15, 5, -2
+```
+
 # 문제 5 
 
 두 문자열 str1, str2를 입력받아, 대소문자를 구분하지 않고(case insensitive) 두 문자열이 동일한지를 반환하는 함수(insensitiveEqual)를 작성하세요.
