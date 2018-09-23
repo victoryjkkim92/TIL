@@ -124,6 +124,19 @@ range(3, 6); // 반환값: [3, 4, 5, 6] range(-4, 0); // 반환값: [-4, -3, -2,
 
 sum([1, 2, 3]); // 반환값: 6
 
+```
+function sum(arr){
+  let sum = 0;
+  for(let num of arr){
+    sum+= num;
+  }
+  return sum;
+}
+
+
+sum([1,2,3]); // 반환값 6;
+```
+
 # 문제 10 
 
 두 정수 min, max 를 입력받아, min 이상 max 미만인 임의의 정수를 반환하는 함수(randomInteger)를 작성하세요.
