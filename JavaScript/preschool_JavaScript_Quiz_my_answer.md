@@ -62,6 +62,19 @@ printEvenOdd20();
 
 /* 출력: 1: 홀수 2: 짝수 3: 홀수 4: 짝수 5: 홀수 6: 짝수 7: 홀수 8: 짝수 9: 홀수 10: 짝수 11: 홀수 12: 짝수 13: 홀수 14: 짝수 15: 홀수 16: 짝수 17: 홀수 18: 짝수 19: 홀수 20: 짝수 */
 
+```
+function printIfEvenOrOdd(i){
+  if(i % 2 === 0){ // 나머지연산자
+    console.log(`${i} : 짝수`);
+  } else {
+    console.log(`${i} : 홀수`);
+  }
+}
+for (let i = 1; i<=20; i++){ 
+  printIfEvenOrOdd(i);
+}
+```
+
 # 문제 4 
 
 세 수를 입력받아 큰 것부터 차례대로 출력하는 함수(printLargerFirst)를 작성하세요.
