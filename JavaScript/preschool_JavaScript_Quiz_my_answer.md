@@ -64,10 +64,11 @@ printEvenOdd20();
 
 ```
 function printIfEvenOrOdd(i){
-  if(i % 2 === 0){ // 나머지연산자
+  if(i % 2 === 0){   // 나머지연산자
     console.log(`${i} : 짝수`);
   } else {
     console.log(`${i} : 홀수`);
+    // ${} : 템플릿 대입문(template substitution)
   }
 }
 for (let i = 1; i<=20; i++){ 
