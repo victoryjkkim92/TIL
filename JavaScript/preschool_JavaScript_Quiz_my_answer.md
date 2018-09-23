@@ -144,3 +144,11 @@ sum([1,2,3]); // 반환값 6;
 호출 예시:
 
 randomInteger(1, 7); // 반환값: 1, 2, 3, 4, 5, 6 중 임의의 수 하나
+
+```
+function randomInteger(min, max) {
+  return Math.floor(Math.random() * (7 - 1)) + 1;
+}
+randomInteger(1, 7); // 반환값: 1, 2, 3, 4, 5, 6 중 임의의 수 하나
+
+```
