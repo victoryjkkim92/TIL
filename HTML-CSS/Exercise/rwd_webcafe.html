@@ -1,12 +1,305 @@
 <!DOCTYPE html>
 <html lang="ko-KR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>반응형 웹카페</title>
-    <link rel="stylesheet" href="css/rwd.css">
+    <style>
+        @charset "utf-8";
+
+/* 스타일 초기화 */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video /* * : 전체선택자*/ {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 1em;
+    font: inherit;
+    vertical-align: baseline;
+    box-sizing: border-box;
+}
+li, a { 
+    text-decoration:none;
+}
+ul { 
+	list-style-type: none; 
+}
+
+.readable-hidden{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden; 
+    margin: -1px;
+    clip: rect(0,0,0,0);
+}
+
+/* 레이아웃 */
+.container {
+    /* background: silver; */
+}
+.header {
+    background: olive;
+}
+.navigation {
+    background: darkcyan;
+}
+.book {
+    background: sandybrown;
+}
+.news {
+    background: lightcoral;
+}
+.board {
+    background: orange;
+}
+.twitter {
+    background: yellowgreen; 
+}
+.favorite {
+     background: darkkhaki;
+}
+.slogan {
+    background: purple;
+}
+.footer {
+     background: peachpuff;
+}
+/* 공통 레이아웃 */
+.header,
+.main,
+.slogan {
+    width: 1000px;
+    margin: 0 auto;
+  }
+
+
+/* 랩탑 및 와이드 스크린 디바이스 */
+@media screen and (min-width: 1000px){
+
+/* 헤더 */
+
+.header{
+    display: grid;
+    background-color: #fff;
+    position: relative;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 30% 70%;
+    -ms-grid-rows: 50px 50px;
+    grid-template-columns: repeat(12, 65px);
+    grid-template-rows: 50px 50px;
+    grid-column-gap: 20px;
+}
+.logo {
+    margin: 0;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 3;
+    grid-column: 1 / span 3;
+    grid-row: 1 / span 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+.logo a,
+.logo img {
+    display: block;
+  }
+.member{
+    grid-column: 10 / span 3;
+    grid-row: 1 / 2;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 10px;
+}
+.member li::before {
+    content: "|";
+  }
+.member li:first-child::before {
+    content: "";
+}
+.member a{
+    color: #000;
+    font-size: 14px;
+    padding: 0 10px;
+}
+
+.header-fieldset{
+    grid-column: 8 / span 5 ;
+    grid-row-start: 2;
+}
+.header-fieldset input{
+    height: 35px;
+    width: 340px;
+    padding: 2px 2px 2px 10px;
+    border: 1px solid #666;
+    border-radius: 5px;
+    margin-right: 0.5em;
+}
+.btn-search{
+    height: 35px;
+    width: 50px;
+    padding: 5px;
+    color: #fff;
+    border: 1px solid #666;
+    background-color: #988574;
+    border-radius: 5px;
+}
+
+
+
+/* 네비게이션 */
+.navigation{
+    background: #988574;
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+    padding-top: 20px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.menu li{
+    display: inline-block;
+    margin: 0 20px;
+}
+
+.menu-item-text{
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: #fff;
+    text-shadow: 1px 0 0 #000, 
+                 0 1px 0 #000, 
+                -1px 0 0 #000,
+                 0 -1px 0 #000;
+}
+.sub-menu li{
+    display: block;
+    margin: 15px 10px; 
+    
+}
+.sub-menu a{
+    padding:0 5px;
+    color: #fff;
+}
+.sub-menu a:hover{
+    color: yellow;
+}
+/* 하위 다섯가지 목록을 감싸는 .wrapper */
+.wrapper{
+    display: grid;
+    background-color: #fff;
+    position: relative;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 30% 70%;
+    -ms-grid-rows: 50px 50px;
+    grid-template-columns: repeat(12, 65px);
+    grid-template-rows: 50px 50px;
+    grid-column-gap: 20px;
+    justify-content: center;
+}
+/* 추천서적 */
+.book {
+    grid-column: 1 / span 4;
+    grid-row: 1;
+
+}
+
+
+
+
+
+/* 새소식 */
+.news {
+    grid-column: 5 / span 8;
+    grid-row: 1;    
+}
+/* 게시판 */
+.board {
+    grid-column: 1 / span 4;
+    grid-row: 2;
+}
+/* 트위터 */
+.twitter {
+    grid-column: 5 / span 5;
+    grid-row: 2;
+}
+/* 인기 사이트 */
+.favorite {
+    grid-column: 10 / span 3;
+    grid-row: 2;
+}
+/* 슬로건 */
+.slogan {
+    
+}
+/* 푸터 */
+.footer {
+     
+}
+
+
+
+}
+
+
+
+
+/* 모바일 및 태블릿 디바이스 */
+@media screen and (max-width: 999px) {
+  .container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 10% 1fr 1fr 1fr 1fr 1fr 1fr 10% 10%;
+  }
+  .header {
+    grid-column: 1;
+  }
+  .navigation {
+    grid-column: 1;
+  }
+  .book {
+    grid-column: 1;
+  }
+  .news {
+    grid-column: 1;
+  }
+  .board {
+    grid-column: 1;
+  }
+  .favorite {
+    grid-column: 1;
+  }
+  .twitter {
+    grid-column: 1;
+  }
+  .slogan {
+    grid-column: 1;
+  }
+  .footer {
+    grid-column: 1;
+  }
+}
+
+
+    </style>
 </head>
 <body>
     <div class="container">
@@ -21,15 +314,84 @@
                 <li><a href="#">회원가입</a></li>
                 <li><a href="#">커뮤니티</a></li>
             </ul>
+            <fieldset class="header-fieldset">
+                <legend class="readable-hidden">검색 폼</legend>
+                <!-- <label for="search" class="a11y-hidden">검색어</label> -->
+                <input aria-label="검색어" type="search" id="search" required="" placeholder="검색어를 입력하세요">
+                <button type="submit" class="btn-search">검색</button>
+            </fieldset>
         </header>
-        <nav class="navigation">네비게이션</nav>
-        <!-- <div class="wrapper"> -->
-            <div class="book">추천서적</div>
+        <nav class="navigation">
+            <h2 class="readable-hidden">메인 메뉴</h2>
+            <ul class="menu">
+                <li>
+                    <span class="menu-item-text">HTML에 대해</span>
+                    <ul class="sub-menu">
+                        <li><a href="#">HTML5 소개</a></li>
+                        <li><a href="#">레퍼런스 소개</a></li>
+                        <li><a href="#">활용 예제</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="menu-item-text">CSS에 대해</span>
+                    <ul class="sub-menu">
+                        <li><a href="#">CSS 소개</a></li>
+                        <li><a href="#">CSS2 VS CSS3</a></li>
+                        <li><a href="#">CSS 애니메이션</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="menu-item-text">웹표준/웹접근성</span>
+                    <ul class="sub-menu">
+                        <li><a href="#">웹표준 이란?</a></li>
+                        <li><a href="#">웹접근성의 개요</a></li>
+                        <li><a href="#">HTML5의 현재와 미래</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="menu-item-text">묻고 답하기</span>
+                    <ul class="sub-menu">
+                        <li><a href="#">묻고 답하기</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">1대1 질문</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="menu-item-text">자료실</span>
+                    <ul class="sub-menu">
+                        <li><a href="#">공개 자료실</a></li>
+                        <li><a href="#">이미지 자료실</a></li>
+                        <li><a href="#">예제 자료실</a></li>
+                    </ul>
+                </li>
+            </ul> 
+        </nav>
+        <div class="wrapper">
+            <div class="book">
+                <h2 class="recommend-book-heading main-section-heading">
+                    <span class="en-heading">
+                        Recommend Book
+                    </span>
+                </h2>
+                <figure class="recommend-book-cover">
+                    <img src="images/book_rwd.jpg" alt="" aria-labelledby="cover-caption">
+                    <figcaption id="cover-caption">반응형웹 핵심 가이드북 도서</figcaption>
+                </figure>
+                <dl class="recommend-book-detail">
+                    <dt class="recommend-book-author">저자</dt>
+                    <dd class="recommend-book-author-name">김데레사</dd>
+                    <dt class="a11y-hidden">평점</dt>
+                    <dd class="recommend-book-grade" aria-label="5점 만점에 4점">★★★★☆</dd>
+                </dl>
+                <p class="recommend-book-summary">
+                    반응형웹 디자인을 위한 핵심 내용을 다루고 있으며 미디어쿼리, 유연한 레이아웃, 반응형 이미지 기법을 학습할 수 있다. 모바일 및 다양한 해상도에 대응이 가능한 웹디자인을 이 책으로 시작해 보자!
+                </p>
+            </div>
             <div class="news">새소식</div>
             <div class="board">게시판</div>
             <div class="twitter">트위터</div>
             <div class="favorite">인기 사이트</div>
-        <!-- </div> -->
+        </div>
         <article class="slogan">슬로건</article>
         <footer class="footer">푸터</footer>
     </div>
