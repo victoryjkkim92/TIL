@@ -33,7 +33,7 @@ Number.isNaN(thisIsNan); // true
 Object.is(thisIsNan, NaN); // true
 ``` 
 
-> 어떤 값이 `NaN`인지 아닌지 확인하고 싶을때 등호`===`를 사용하지 마세요! "NaN은 숫자가 아니기 때문에, 어떤 숫자와도 같지 않다."는 규칙이 있다. 즉, NaN은 number타입인 NaN과 같지 않다.
+> 어떤 값이 `NaN`인지 아닌지 확인하고 싶을때 등호(ex.`===`)를 사용하지 마세요! "NaN은 숫자가 아니기 때문에, 어떤 숫자와도 같지 않다."는 규칙이 있다. 즉, NaN은 number타입인 NaN과 같지 않다.
 
 
 _수업시간 예제_ 
