@@ -33,6 +33,36 @@ Number.isNaN(thisIsNan); // true
 Object.is(thisIsNan, NaN); // true
 ``` 
 
+> 어떤 값이 `NaN`인지 아닌지 확인하고 싶을때 등호`===`를 사용하지 마세요! "NaN은 숫자가 아니기 때문에, 어떤 숫자와도 같지 않다."는 규칙이 있다. 즉, NaN은 number타입인 NaN과 같지 않다.
+
+
+_수업시간 예제_ 
+
+```
+const a = prompt('a: ')
+const b = prompt('b: ')
+const parsedA = parseInt(a)
+const parsedB = parseInt(b)
+
+// 이렇게 하면 안 됩니다!!!
+// if (parsedA === NaN || parsedB === NaN) {
+//   alert('숫자를 입력해주세요')
+// } else {
+//   alert(parsedA + parsedB)
+// }
+
+// "NaN은 숫자가 아니기 때문에, 어떤 숫자와도 같지 않다." 는 규칙이 있다.
+// => 즉, NaN은 number 타입인 NaN과 같지 않다.
+
+if (Number.isNaN(parsedA) || Number.isNaN(parsedB)) {
+  alert('숫자를 입력해주세요')
+} else {
+  alert(parsedA + parsedB)
+}
+```
+
+
+
 ## -0
 
 JavaScript에서 `0`과 `-0`은 별개의 값이지만, 비교 연산을 해보면 결과값이 `true`로 나옵니다. 즉, 거의 모든 경우에 `0`과 같은 값으로 간주됩니다. 
