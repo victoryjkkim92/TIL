@@ -106,14 +106,15 @@ limit(3, 7, 0); -> 3
 ```js
 
 function limit(min,max,input){
-  if (min > input) {
-    return min;
+  if (min > input) {   
+    return min;   // `min`보다 `input`이 작으면, `min`을 반환
   } else if (max < input) {
-      return max;
+      return max;  // `max`보다 `input`이 크면, `max`를 반환합니다.
     } else {
-      return input;
+      return input; // 아니면 `input`을 반환합니다.
     }
 }
+
 // console.log(limit(3,7,5)); 반환값 : 5
 // console.log(limit(3, 7, 11)); 반환값 : 7
 // console.log(limit(3, 7, 0)); 반환값 : 3
@@ -130,17 +131,15 @@ function limit(min,max,input){
 ```js
 
 function evenOrOdd(x){
-  // 만약 x가 짝수면 'x: 짝수'라고 출력
   if (x % 2 === 0){
-    console.log('x: 짝수');
+    console.log('x: 짝수');   // 만약 x가 짝수면 'x: 짝수'라고 출력
   }
-  // 아니면 'x:홀수'라고 출력
   else {
-    console.log('x: 홀수');
+    console.log('x: 홀수');  // 아니면 'x:홀수'라고 출력
   }
 }
 
-이를 이용해서, 1부터 20까지의 수가 각각 짝수인지 홀수인지 출력하는 프로그램을 작성하세요.
+// 이를 이용해서, 1부터 20까지의 수가 각각 짝수인지 홀수인지 출력하는 프로그램을 작성하세요.
 
 for(let i = 0; i< 20; i++){
   evenOrOdd(i+1) // i+1이라고 해주지않으면 초기값인 0부터 시작
@@ -153,13 +152,11 @@ for(let i = 0; i< 20; i++){
 ```js
 
 function evenOrOdd(x){
-  // 만약 x가 짝수면 'x: 짝수'라고 출력
   if (x % 2 === 0){
-    console.log(x + ': 짝수');
+    console.log('x: 짝수');   // 만약 x가 짝수면 'x: 짝수'라고 출력
   }
-  // 아니면 'x:홀수'라고 출력
   else {
-    console.log(x + ': 홀수');
+    console.log('x: 홀수');  // 아니면 'x:홀수'라고 출력
   }
 }
 
@@ -174,9 +171,8 @@ for(let i = 0; i< 20; i++){
 
 ```js
 function evenOrOdd(x){
-  // 만약 x가 짝수면 'x: 짝수'라고 출력
   if (x % 2 === 0){
-    console.log(x + ': 짝수'); 
+    console.log(x + ': 짝수');  // 만약 x가 짝수면 'x: 짝수'라고 출력
     // 만약 '짝수 2 짝수'를 표현하기 위해선  '짝수' + x +'짝수'를 해야하지만,
   }
   else {
