@@ -2,7 +2,7 @@
 
 다음 값들도 모두 number타입에 속한다.
 
-```
+```js
 NaN
 -0
 Infinity
@@ -16,7 +16,7 @@ Nan과 Infinity 역시 IEEE754 표준에 정의되어 있는 값들이다.
 
 `NaN`은 `Not a Number'의 약자로, 계속 불가능한 연산의 결과 값을 나타내기 위해 사용된다. 
 
-```
+```js
 0 / 0; // NaN
 1 * 'hello'; // NaN
 ```
@@ -27,7 +27,7 @@ Nan과 Infinity 역시 IEEE754 표준에 정의되어 있는 값들이다.
 
  
 
-```
+```js
 const thisIsNan = NaN;
 
 // 주의! 이렇게 하면 안된다. 
@@ -41,7 +41,7 @@ Object.is(thisIsNan, NaN); // true
 
 _수업시간 예제_ 
 
-```
+```js
 const a = prompt('a: ')
 const b = prompt('b: ')
 const parsedA = parseInt(a)
@@ -70,7 +70,7 @@ if (Number.isNaN(parsedA) || Number.isNaN(parsedB)) {
 
 JavaScript에서 `0`과 `-0`은 별개의 값이지만, 비교 연산을 해보면 결과값이 `true`로 나옵니다. 즉, 거의 모든 경우에 `0`과 같은 값으로 간주됩니다. 
 
-```
+```js
 0 === -0; // true
 1 * -0; // -0
 1 + -0; //1 
@@ -78,14 +78,14 @@ JavaScript에서 `0`과 `-0`은 별개의 값이지만, 비교 연산을 해보�
 
 그러나 몇몇 예외가 존재한다. `Object.is`함수는 `0`과 `-0`을 다른 값으로 취급한다. 
 
-```
+```js
 0bject.is(0,-0); // false
 // 실제로 JavaScript세계에서 같은 값이냐 물어보는것
 ```
 
 그리고 0이 아닌 어떤 수를 `0`혹은 `-0`으로 나눌 때에도 결과값이 다릅니다. 
 
-```
+```js
 1 / 0; // Infinity
 1 / -0; // -Infinity
 ```
@@ -94,14 +94,14 @@ JavaScript에서 `0`과 `-0`은 별개의 값이지만, 비교 연산을 해보�
 
 JavaScript는 **무한대**를 내장하고 있으며, 아래와 같이 동작합니다. 
 
-```
+```js
 1 / Infinity; // 0
 1 / -Infinity; // -0
 ```
 
 어떤 값이 `Infinity`인지 아닌지 판별하려면, `Number.isFinite` 메소드를 사용하세요. 비슷한 기능의 `isFinite` 라는 전역 함수도 존재하긴 하지만, 동작이 미묘하게 다르므로 ES2015에 추가된 `Number.isFinite` 를 사용하는 것 추천한다.
 
-```
+```js
 Number.isFinite(1); // true
 Number.isFinite(Infinity); // false
 Number.isFinite('1'); // false
@@ -109,7 +109,7 @@ isFinite('1'); // true - 'isFinite' 는 문자열을 숫자로 변환합니다. 
 ``` 
 _수업시간 예제_
 	
-```
+```js
 const a = prompt('a: ')
 const b = prompt('b: ')
 const parsedA = parseInt(a)
@@ -128,7 +128,7 @@ if (Number.isNaN(parsedA) || Number.isNaN(parsedB)) {
 
 문자열을 number 타입으로 바꾸기 위해 `parseInt[문자->숫자]` 혹은 `parseFloat[문자->실수]` 함수를 사용할 수 있다.
 
-```
+```js
 parseInt('123'); // 123
 parseInt('110', 2); // 6 (문자열을 2진수로 간주한다.)
 parseFloat('12,345'); // 12.345
@@ -141,7 +141,7 @@ parseInt('hello'); // NaN
 
 JavaScript는 number 타입과 다른 타입 간의 연산도 허용하지만, 그 결과가 별로 우아하지 않다.
 
-```
+```js
 1 + null; // null
 1 * '1'; // NaN
 1 + '1'; // '11'
@@ -152,7 +152,7 @@ JavaScript는 number 타입과 다른 타입 간의 연산도 허용하지만, �
 
 특히 `prompt`나 `input` 태그 등을 통해 사용자로부터 입력받은 데이터는 `undefined` 혹은 문자열일 가능성이 높다. 이런 경우에는 **수 연산을 하기 전에** 모든 피연산자를 확실히 number 타입으로 만들어 주는 것이 좋은 습관이다. 
 
-```
+```js
 const input - promp('정수를 입력하세요');
 const num = parseInt(input);
 if (Number.isNaN(num)) {
@@ -169,7 +169,7 @@ if (Number.isNaN(num)) {
 
 JavaScript에 내장된 `Math` 객체에는 수 연산을 위한 많은 메소드와 상수들이 내장되어 있습니다.
 
-```
+```js
 // 상수
 Math.E // 자연상수 (2.71...)
 Math.PI // 원주율 (3.14...)
@@ -200,7 +200,7 @@ Math.random
 
 위 메소드와 상수들을 이용해 여러 가지 계산을 시험해보세요.
 
-```
+```js
 Math.cos(Math.PI); // -1
 Math.log(Math.E); // 1
 Math.round(0.5); // 1
@@ -212,7 +212,7 @@ _수업시간 예제 1_
 
 3가지 중 하나를 랜덤으로 출력
 
-```
+```js
 const CARDS = ['A','B','C',]
   CARDS[Math.floor (Math.random()*3)] 
 ```
@@ -221,7 +221,7 @@ _수업시간 예제 2_
 
 주사위게임(1부터 6까지 랜덤으로 출력되게함)
 
-```
+```js
 Math.ceil(Math.random()*6) // 0부터 6사이의 값에 소수점 아래 올림
 
 혹은
