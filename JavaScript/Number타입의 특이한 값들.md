@@ -247,7 +247,9 @@ console.log()와 return의 차이점에 대해서 알게되었다. 전자는 그
 
 27.SEPT.2018
 
-JavaScript 첫수업 ) 수업 시작 전 제출 해야하는 알고리즘 문제 제출을 한 것과 예습을 해온게 천만다행이었다고 생각했다.  
+JavaScript 첫수업 ) 수업 시작 전 제출 해야하는 알고리즘 문제 제출을 한 것과 예습을 해온게 천만다행이었다고 생각했다. 수업시간에 복습해야겠다고 생각한 개념들을 정리했는데 7가지나 되었다. 집에 바로 가지말고 남아서 공부해야겠다ㅠㅠ
+
+It was my first day actually learning JavaScript, and it more interesting than I thought it'd be. I'm stocked to learn more and to upload til md files. Overall, very satisfied!
 
 
 
