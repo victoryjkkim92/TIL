@@ -2,7 +2,7 @@
 
 두 수를 입력받아 큰 수를 반환하는 함수를 작성하세요.
 
-방법 1
+* 방법 1
 
 ```js
 function larger(x, y){ // 매개변수(parameter)
@@ -21,7 +21,7 @@ function larger(x, y){ // 매개변수(parameter)
 }
 ```
 
-방법 2 
+* 방법 2 
 
 ```js
   function larger(x,y){
@@ -36,7 +36,7 @@ function larger(x, y){ // 매개변수(parameter)
   console.log(larger(3,2)); // 
 ```
 
-방법 3
+* 방법 3
 
 ```js
   function larger(x,y){
@@ -48,7 +48,8 @@ function larger(x, y){ // 매개변수(parameter)
   }
   console.log(larger(3,4));
 ```
-방법 4
+
+* 방법 4
 
 ```js
   function larger(x,y){
@@ -68,7 +69,7 @@ function larger(x, y){ // 매개변수(parameter)
 throw new Error('입력값이 잘못되었습니다.');
 ```
 
-방법 1
+* 방법 1
 
 ```js
 
@@ -100,6 +101,8 @@ limit(3, 7, 11); -> 7
 limit(3, 7, 0); -> 3
 ```
 
+* 방법 1
+
 ```js
 
 function limit(min,max,input){
@@ -122,6 +125,8 @@ function limit(min,max,input){
 
 어떤 정수가 짝수인지 홀수인지 출력하는 함수를 작성하세요. 이를 이용해서, 1부터 20까지의 수가 각각 짝수인지 홀수인지 출력하는 프로그램을 작성하세요.
 
+* 방법 1
+
 ```js
 
 function evenOrOdd(x){
@@ -143,8 +148,9 @@ for(let i = 0; i< 20; i++){
 
 ```
 
+* 문자열 이어붙이기 | 만약 어떤 수를 출력하고싶은지 또한 화면 출력을 원할 때_1 *
+
 ```js
-// 문자열 이어붙이기 | 만약 어떤 수를 출력하고싶은지 또한 화면 출력을 원할 때
 
 function evenOrOdd(x){
   // 만약 x가 짝수면 'x: 짝수'라고 출력
@@ -164,6 +170,8 @@ for(let i = 0; i< 20; i++){
 }
 ```
 
+* 문자열 이어붙이기 | 만약 어떤 수를 출력하고싶은지 또한 화면 출력을 원할 때_2 *
+
 ```js
 function evenOrOdd(x){
   // 만약 x가 짝수면 'x: 짝수'라고 출력
@@ -173,7 +181,7 @@ function evenOrOdd(x){
   }
   else {
     console.log(`${x}: 홀수`);
-    // 탬플렛리터럴 _ 백틱(`) _ 을 사용할 땐 `홀수 ${x} 홀수`만 해도 되지롱
+    // 탬플렛리터럴 _ 백틱(`) _ 을 사용할 땐 `홀수 ${x} 홀수`만 해도 된다용
   }
 }
 
@@ -183,9 +191,6 @@ for(let i = 0; i< 20; i++){
   evenOrOdd(i+1)
 }
 ```
-
-
-
 
 
 ### 문제 5
