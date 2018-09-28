@@ -124,7 +124,7 @@ JavaScript는 특수 문자를 문자열에 넣거나, 혹은 직접 유니코�
 
 --
 
-\u{X...}는 Unicode Code Point가 5자리 이상일 떄 사용 (ex. '\u{1F51B}')
+// \u{X...}는 Unicode Code Point가 5자리 이상일 떄 사용 (ex. '\u{1F51B}')
    
 ```
 
