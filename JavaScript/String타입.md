@@ -105,6 +105,8 @@ JavaScript는 특수 문자를 문자열에 넣거나, 혹은 직접 유니코�
 
 참조 : [유니코드 문자](http://graphemica.com/unicode/characters) _ Unicode Code Point : 문자에 메겨져 있는 번호(16진수) (한글은 176페이지부터 나옴) 
 
+![Alt text](images/unicode_ko.png)
+
 * Unicode Code Point를 사용한 실습
 
 ```js	
