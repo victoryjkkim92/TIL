@@ -184,9 +184,11 @@ console.log('\u{1F435}'); // 🐵
 '가나다'.localeCompare('마바사'); // -1
 ```
 
-* 수업시간 실습 예제 // 문자열 연결하기 : 숫자와 문자열이 더해지면 문자열이 나옴!
+* 수업시간 실습 예제 
 
 ```js
+
+	//문자열 연결하기 : 숫자와 문자열이 더해지면 문자열이 나옴!
 	
    'number' + 1 + 3 // 'number' + 1 이 먼저 계산 된 후, +3이 계산됨
    
@@ -199,9 +201,11 @@ console.log('\u{1F435}'); // 🐵
 
 ## 속성 및 메소드
 
+> 문자열은 객체가 아니다.
+
 number 타입과 마찬가지로 string 타입도 래퍼 객체의 속성과 메소드를 사용할 수 있습니다. 아래는 자주 쓰이는 몇 개의 속성과 메소드에 대한 예제입니다. 이 밖의 내용을 확인하려면 MDN 문서를 참고하세요.
 
-참고 : [MDN문서](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/String#String_instances)
+참고 : [MDN문서](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)
 
 
 ```js
@@ -218,13 +222,13 @@ number 타입과 마찬가지로 string 타입도 래퍼 객체의 속성과 메
 'hello javascript'.includes('hello'); // true
 'hello javascript'.startsWith('he'); // true
 'hello javascript'.endsWith('ript'); // true
-'hello javascript'.indexOf('java'); // 6
+'hello javascript'.indexOf('java'); // 6 (만약, 포함되어 있지 않은 값을 물어보면 출력값 : -1 | 예전엔 .indexOf()를 사용해서 .includes()기능을 구현 `!== -1`)
 
 // 문자열의 특정 부분을 바꾼 새 문자열 생성하기
 'hello javascript'.replace('java', 'type'); // 'hello typescript'
 
-// 문자열의 일부를 잘라낸 새 문자열 생성하기
-'hello'.slice(2, 4); // 'll'
+// 문자열의 일부를 잘라낸 새 문자열 생성하기 | .splice()메소드는 원본 문자열을 변경시키지 않는다. 
+'hello'.slice(2, 4); // 'll' 
 
 // 좌우 공백문자를 제거한 새 문자열 생성하기
 '   hello  '.trim(); // 'hello'
@@ -237,13 +241,33 @@ number 타입과 마찬가지로 string 타입도 래퍼 객체의 속성과 메
 
 // 문자열을 특정 문자를 기준으로 잘라 새 배열 생성하기
 'hello!fun!javavscript'.split('!'); // ['hello', 'fun', 'javascript']
-'hello'.split(''); // ['h', 'e', 'l', 'l', 'o']
+'hello'.split(''); // ['h', 'e', 'l', 'l', 'o'] // .split()메소드는 원본 문자열을 변경시키지 않는다. 
 
 // 모든 문자를 소문자, 혹은 대문자로 변환한 새 문자열 생성하기
+		
+		언제 쓸까? 대소문자 관계없이 비교를 하고 싶을때! (예,게시물을 찾을 경우)
+		
 'Hello JavaScript'.toLowerCase(); // 'hello javascript'
 'Hello JavaScript'.toUpperCase(); // 'HELLO JAVASCRIPT'
 ```
 
 
->1. 정확히 말하면, 문자열은 JavaScript 내부적으로 UTF-16 형식으로 인코딩된 값으로 다뤄집니다. [명세](https://tc39.github.io/ecma262/#sec-ecmascript-language-types-string-type) ↩
->2. 그렇다고 해서 따옴표를 마구잡이로 섞어 쓰는 게 좋은 것은 아니며, 꼭 필요한 경우가 아니라면 코드의 일관성을 위해 한 가지 종류의 따옴표만을 사용하는 것이 좋습니다. 주로 홑따옴표(')가 널리 사용됩니다. ↩
+>1. 정확히 말하면, 문자열은 JavaScript 내부적으로 UTF-16 형식으로 인코딩된 값으로 다뤄집니다. [명세](https://tc39.github.io/ecma262/#sec-ecmascript-language-types-string-type) 
+
+JavaScript 해석기는 UTF-16을 사용(용량은 크지만 처리속도가 빠름)
+JavaScript 파일을 저장할 때에는 UTF-8사용(처리속도는 조금 느리지만 용량은 작다)
+
+1 비트(bit) = 0과 1 = 두 가지 경우의 수
+1 바이트(byte) = 8 비트 = 256 가지 경우의 수
+
+>2. 그렇다고 해서 따옴표를 마구잡이로 섞어 쓰는 게 좋은 것은 아니며, 꼭 필요한 경우가 아니라면 코드의 일관성을 위해 한 가지 종류의 따옴표만을 사용하는 것이 좋습니다. 주로 홑따옴표(')가 널리 사용됩니다. 
+
+
+
+## TIL
+
+1. 유니코드가 무엇이가?
+
+1. UTF-8 과 UTF-16의 장단점
+
+참고 : [devdocs] (http://devdocs.io/)
