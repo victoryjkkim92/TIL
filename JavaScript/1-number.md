@@ -333,6 +333,26 @@ for(i=0; i<100; i++){
 
 양의 정수를 입력받아, 다음과 같은 패턴의 출력을 하는 함수를 작성하세요.
 
+* 접근방법 
+
+  + 출력하는 함수를 작성하세요 : console.log(); 사용 | function starPattern(n){}
+  + 양의 정수를 입력받아 : for문 작성 _ for(i = 1; i <= n; i ++ ){}
+  + 별 출력 : 'string타입'.repeat() 메소드 사용! 
+  + 그러기 위해선 -> const star = '* '라는 변수 선언
+
+```js
+function starPattern(n){
+  const star = "* "
+  for (i = 1; i <=n; i++){
+    console.log(star.repeat(i));
+  }
+}
+
+starPattern(1);
+starPattern(3);
+starPattern(5);
+```
+
 1을 입력받은 경우:
 ```
 *
