@@ -8,9 +8,17 @@ insensitiveEqual('hello', 'hello'); -> true
 insensitiveEqual('hello', 'Hello'); -> true
 insensitiveEqual('hello', 'world'); -> false
 ```
+* 접근방법 
+  
+  + 두 문자열을 입력받는 함수를 작성하라고 했으니까 function.insensitiveEqual(str1, str2){}
+  + 대소문자 구분하지 않는다고 했으니까, 두개 다 toLowerCase() 또는 .toUpperCase()로 바꿔준다음 === 같냐고 물어봄
+  + 같으면 true, 다르면 false
+
+
+
 
 ```js
-// 긴 버전
+
 function insensitiveEqual(str1, str2) {
   if (str1.toLowerCase() === str2.toLowerCase()) {
     return true
@@ -26,6 +34,7 @@ function insensitiveEqual(str1, str2) {
   return str1.toLowerCase() === str2.toLowerCase()
 }
 ```
+
 ### 문제 2
 
 문자열 `s`와 자연수 `n`을 입력받아, 만약 `s`의 길이가 `n`보다 작으면 `s`의 왼쪽에 공백을 추가해서 길이가 `n`이 되게 만든 후 반환하고, 아니면 `s`를 그대로 반환하는 함수를 작성해보세요.
@@ -36,17 +45,27 @@ leftPad('hello', 8); -> '   hello'
 leftPad('hello', 3); -> 'hello'
 ```
 
+* 접근방법 
+
+ +  문자열 `s`와 자연수 `n`을 입력받은 함수 : function leftpad(s,n)
+ +  만약 문자열`s`의 길이가 `n`보다 작으면 : if (s.length 가 숫자 n보다 작으면)
+ +  n에서 s.length만큼의 공백을 추가해야해서 먼저 선언 : const spaceNum = n - s.length
+ + `s`의 왼쪽에 공백으로 추가해서 길이가 `n`이 되게 만든 후 반환 : return '  '.repeat(spaceNum) _ 공백을 spaceNum만큼 준 다음, + s를 씀
+ +  아니면 `s`를 그대로 반환하는 함수를 작성해보세요 : else 아니면 s 그냥 반환
+
+
 ```js
-function leftPad(s, n) {
-  if (s.length < n) {
+function leftPad(s,n){
+  if (s.length < n){
     const spaceNum = n - s.length
-    return ' '.repeat(spaceNum) + s
+    return ' '.repeat(spaceNum) + s;
   } else {
-    return s
+    return s;
   }
 }
-
+leftPad('aha',5); // 반환값 : '  aha'
 ```
+
 
 ### 문제 3
 
@@ -64,6 +83,28 @@ function count(str) {
 }
 
 count('hello')
+```
+
+* 접근방법
+
+  + 문자열을 입력받아 값을 반환하는 함수를 작성 : function count(str){}
+  + 모음이면 1을 더해주자 : let num = 0 변수 선언 
+  + 한 글자씩 보면서 모음인지 아닌지 확인 : if문씀, 초기값은 0, 반복횟수는 스트링 길이만큼, 하나씩 증가시킴
+  + 모음이 보이면 num에 1씩 더해라
+  + 반환 함수 적어줌!
+
+```js
+   function count(str) {
+    let num = 0
+    for (let i = 0; i < str.length; i++) { 
+        if (str[i] === 'a' || str[i] === 'e' || str[i] === 'i' || str[i] === 'o' || str[i] === 'u') {
+                num += 1
+        }
+    }
+    return num
+    }
+
+    count('hello')
 ```
 
 ### 문제 4
