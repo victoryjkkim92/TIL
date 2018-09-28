@@ -241,17 +241,18 @@ divide(20);  // 출력값 : 1,2,4,5,10,20 (20의 약수)
 
 ```js
 
-// function divide(n){
-//   for(i=1; i<=n; i++){
-//     if(n % i === 0){
-//       console.log(`${i} : 약수`);
-//     } else{
-//       console.log(`${i} : 약수 아님`);
-//     }
-//   }
-// }
+ function divide(n){
+   for(i=1; i<=n; i++){
+    if(n % i === 0){
+      console.log(`${i} : 약수`);
+    } else{ 
+        console.log(`${i} : 약수 아님`);
+    }
+  }
+}
 
-// divide(4);  // 출력값 : 
+// divide(4);  
+// 출력값 : 
 // 1 : 약수
 // 2 : 약수
 // 3 : 약수 아님
