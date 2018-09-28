@@ -59,6 +59,7 @@ console.log(plants);
 * The `splice()` method changes the contents of an array by removing existing elements and/or adding new elements.
 
 * `splice()`메소드는 배열 안에 있는 요소를 제거하거나 삽입함으로써 배열의 내용물을 바꾼다.
+> `.splice()`메소드는 원본 문자열을 변경시키지 않는다. 
 
 ```js
 let months = ['Jan', 'March', 'April', 'June'];
