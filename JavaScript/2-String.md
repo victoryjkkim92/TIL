@@ -71,19 +71,6 @@ leftPad('aha',5); // 반환값 : '  aha'
 
 문자열을 입력받아, 문자열 안에 들어있는 모든 모음(a, e, i, o, u)의 갯수를 반환하는 함수를 작성하세요.
 
-```js
-function count(str) {
-  let num = 0
-  for (let i = 0; i < str.length; i++) { 
-    if (str[i] === 'a' || str[i] === 'e' || str[i] === 'i' || str[i] === 'o' || str[i] === 'u') {
-      num += 1
-    }
-  }
-  return num
-}
-
-count('hello')
-```
 
 * 접근방법
 
