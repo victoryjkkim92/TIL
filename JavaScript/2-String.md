@@ -139,6 +139,24 @@ removeDuplicates('bartender'); -> 'bartend'
 
 문자열을 입력받아, 대문자는 소문자로, 소문자는 대문자로 바꾼 결과를 반환하는 함수를 작성하세요.
 
+* 접근 방법
+ 
+ + 문자열을 입력받아...반환하는 함수 : return | function changeCase(str){}
+ + if 문으로 만약 str이 대문자면 소문자로, else 대문자로 바꿔라
+
+```js
+
+function changeCase(str){
+  if(str === str.toLowerCase()){
+    return str.toUpperCase()
+  } else {
+    return str.toLowerCase()
+  }
+}
+changeCase('HELLO'); // hello
+changeCase('hello'); // HELLO
+```
+
 ### 문제 10
 
 문자열을 입력받아, 각 단어의 첫 글자를 대문자로 바꾼 결과를 반환하는 함수를 작성하세요. (문자열에 개행이 없다고 가정합니다.)
