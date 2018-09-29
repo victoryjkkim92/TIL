@@ -378,6 +378,33 @@ starPattern(5);
 
 양의 정수를 입력받아, 다음과 같은 패턴의 출력을 하는 함수를 작성하세요.
 
+* 접근 방법
+ 
+ + 출력하는 함수를 작성 : console.log() | function starPattern(n){}
+ + 양의 정수를 입력받아 : 하나씩 돌려야 하니까 for문 사용
+ 
+    초기값 1, 반복횟수_ 위아래로 출력되야하니까 n두번 곱한거보다 작을때까지, 1씩 커짐
+ + 별도 필요하고 빈칸도 필요하니까 둘 다 변수 선언 해야 할 것 같음
+ + 그럼 이걸 가지고 if문 사용해서 조건을 정함 어째 정하지...
+ + i가 n보다 작거나 같을때 ->  빈칸은 n-i 만큼, 별은 i 만큼 출력 
+ + i가 n보다 클때 -> 빈칸은 i-n 만큼, 별은 n*2한거에서 i뺀 만큼 출력 [이부분이 제일 어려웠음]
+
+```js
+
+function starPattern(n){
+  const blank = " ";
+  const star = "* ";
+  for (let i = 1; i < 2*n; i++){
+    if (i <= n){
+      console.log(blank.repeat(n-i)+star.repeat(i));
+    } else {
+      console.log(blank.repeat(i-n)+star.repeat(2*n-i));
+    } 
+  }
+}
+starPattern(5);
+```
+
 1를 입력받은 경우:
 ```
 *
