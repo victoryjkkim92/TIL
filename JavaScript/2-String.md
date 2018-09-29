@@ -141,8 +141,8 @@ removeDuplicates('bartender'); -> 'bartend'
 
 * 접근 방법
  
- + 문자열을 입력받아...반환하는 함수 : return | function changeCase(str){}
- + if 문으로 만약 str이 대문자면 소문자로, else 대문자로 바꿔라
+  + 문자열을 입력받아...반환하는 함수 : return | function changeCase(str){}
+  + if 문으로 만약 str이 대문자면 소문자로, else 대문자로 바꿔라
 
 ```js
 
