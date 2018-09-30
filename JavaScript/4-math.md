@@ -6,6 +6,20 @@
 
 두 정수 `min`, `max` 를 입력받아, `min` 이상 `max` 미만인 임의의 정수를 반환하는 함수를 작성하세요.
 
+* 접근방법
+  + 함수 : function randomInteger(min, max){}
+  + min이상 max미만인  (max-min)까지 랜덤반환하는데 min이상이어야 하니까 min더해줌
+  + 임의의 정수 반환 Math.random()쓰면 부동소수점으로 값을 반환해주기때문에 Math.floor()를 써서 소수점 뒤에 내림!
+
+```js
+function randomInteger(min, max){
+  return Math.floor(Math.random() * (max - min))+ min;
+}
+randomInteger(5, 11); // 반환값 : 5,6,7,8,9,10 중에 하나
+```
+
+
+
 ### 문제 3
 
 정수를 입력받아, 5 단위로 올림한 수를 반환하는 함수를 작성하세요.
