@@ -108,6 +108,28 @@ countChar('tomato'); -> {t: 2, o: 2, m: 1, a: 1}
 
 문자열을 입력받아 그 문자열이 회문(palindrome)인지 판별하는 함수를 작성하세요. (회문이란, '토마토', 'never odd or even'과 같이 뒤에서부터 읽어도 똑같이 읽히는 문자열을 말합니다.)
 
+* 접근방법 
+  + 판별하는 함수
+  + true or false | function isPalirome(input){}
+  + for문 사용해서 앞에서 하나씩 확인해보고, 뒤에서 확인해보고
+  + if 단어 앞글자랑 뒷글자랑 같은지 아닌지 같냐?
+
+```js
+
+function isPalirome(input){
+  for(let i = 0; i < input.length; i++){
+    const left = i;
+    const right = input.length - 1;
+    if(input[left] !== input[right]){
+      return false
+    }
+      return true
+  }
+}
+
+isPalirome('이렇게 접근해야겠다고 생각하는게 어려워')
+```
+
 ### 문제 6
 
 문자열을 입력받아, 그 문자열의 모든 '부분 문자열'로 이루어진 배열을 반환하는 함수를 작성하세요.
