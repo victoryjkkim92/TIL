@@ -373,7 +373,7 @@ function print(height){
   for(let i = 0; i <height; i++){
       //한 줄 출력
     let stars = ''
-    for(let j = 0; j < i + 1; i++){
+    for(let j = 0; j < i + 1; j++){
       // 별 표 하나를 출력
     stars += '* '
     }
