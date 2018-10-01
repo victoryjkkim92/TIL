@@ -251,6 +251,29 @@ changeCase('hello'); // HELLO
 
 문자열을 입력받아, 각 단어의 첫 글자를 대문자로 바꾼 결과를 반환하는 함수를 작성하세요. (문자열에 개행이 없다고 가정합니다.)
 
+* 점근방법 
+  + ~을 바꾼 결과를 반환하는 함수 : function firstCapital(str){}
+  + 새로운 문자열을 반환해야하니까 비어있는 변수선언해줘야겠네 let newStr = '';
+  + for문으로 매개변수 길이만큼 하나씩 증가시켜가면서 돌려주고
+  + if문 사용해서 맨 앞에 있거나(i === 0이거나 : 초기값이 0이니까) / 앞칸이 ' ' 비어있으면! 
+  + 변수선언해놓은 애한테 대문자로 바꾼 다음에 넣어줘
+  + 아니면 그냥 넣어...\
+
+```js
+function firstCapital(str) {
+  let newStr = '';
+  for (let i = 0; i < str.length; i++) {
+    if (i === 0 || str[i - 1] === ' ') {
+      newStr += str[i].toUpperCase();
+    } else {
+      newStr += str[i];
+    }
+  }
+  return newStr;
+}
+firstCapital('very difficult') // 반환값 : 'Very Difficult'
+```
+
 ### 문제 11
 
 문자열을 입력받아, 문자열 안에 들어있는 단어 중 가장 긴 단어를 반환하는 함수를 작성하세요. (문자열에 개행이 없다고 가정합니다.)
