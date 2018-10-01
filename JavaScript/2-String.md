@@ -150,6 +150,21 @@ removeDuplicates('tomato'); -> 'toma'
 removeDuplicates('bartender'); -> 'bartend'
 ```
 
+```js
+function removeDuplicates(str) {
+  let memory = '';
+  for (let i = 0; i < str.length; i++) {
+    if (!memory.includes(str[i])) {
+      memory += str[i]
+    }
+  }
+  console.log(memory)
+}
+
+removeDuplicates('tomato') // 'toma'
+
+```
+
 ### 문제 8
 
 이메일 주소를 입력받아, 아이디 부분을 별표(`*`)로 가린 새 문자열을 반환하는 함수를 작성하세요.
