@@ -177,6 +177,32 @@ removeDuplicates('tomato') // 'toma'
 이메일 주소를 입력받아, 아이디 부분을 별표(`*`)로 가린 새 문자열을 반환하는 함수를 작성하세요.
 
 - 루프로 먼저 풀어보세요.
+
+```js
+function removeId(input){
+ let seen = false
+ let memory = ‘’
+ for (let i = 0; i < input.length; i++){
+   // 내가 지금 보고 있는 글자가 ‘@’이면
+   // seen의 값을 true로 바꾼다
+   if (input[i] === ‘@’){
+     seen = true
+   } if (seen === true){
+     memory += input[i]
+   } else{
+     memory += ‘*’
+   }
+   // seen이 true이면
+   // 내가 지금 보고 있는 글자 그대로 memory에 덧붙인다
+   // 아니면, 별표를 대신 덧붙인다.
+ }
+ return memory
+ // 변환한 결과를 반환한다.
+}
+removeId(‘keoeke@gmail.com’)
+```
+
+
 - `split` 메소드를 이용해서 풀어보세요.
 
 ### 문제 9
