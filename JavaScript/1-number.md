@@ -453,6 +453,29 @@ function print(height){
 print(3)
 ```
 
+함수 사용하기
+
+```js
+function printLine(height, i) {
+  const n = i + 1;
+  const line = ' '.repeat(height - n) + '* '.repeat(n)
+  console.log(line)
+}
+
+function print(height) {
+  for (i = 0; i < height; i++) {
+    printLine(height, i)
+  }
+  for (i = height - 2; i >= 0; i--) {
+    printLine(height, i)
+  }
+}
+
+print(3)
+```
+
+
+
 1를 입력받은 경우:
 ```
 *
