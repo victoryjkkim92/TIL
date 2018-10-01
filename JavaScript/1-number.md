@@ -367,6 +367,21 @@ starPattern(3);
 starPattern(5);
 ```
 
+```js
+// 중첩루프사용
+function print(height){
+  for(let i = 0; i <height; i++){
+      //한 줄 출력
+    let stars = ''
+    for(let j = 0; j < i + 1; i++){
+      // 별 표 하나를 출력
+    stars += '* '
+    }
+    console.log(stars)
+  }
+}
+```
+
 1을 입력받은 경우:
 ```
 *
