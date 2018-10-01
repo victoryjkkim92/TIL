@@ -205,6 +205,26 @@ removeId(‘keoeke@gmail.com’)
 
 - `split` 메소드를 이용해서 풀어보세요.
 
+* 접근방법 
+  + 매개변수 .split('@')메소드로 골뱅이 앞 뒤로 잘라서 배열(두 부분 나옴)로 만듬
+  + 비어있는 변수 하나 선언해주고 거기에 값 담아주기
+  + for문 돌리는데 별표 추가해 줄 부분은 배열 인덱스 0번째니까 범위를 걔까지라고 정해줌
+  + 반환할 때 새롭게 생성된 애랑 + @ + 두번째 배열 합
+
+```js
+
+function removeId(input) {
+  const strings = input.split('@');
+  let newStr = '';
+  for (let i = 0; i < strings[0].length; i++) {
+    newStr += '*';
+  }
+  return newStr + '@' + strings[1];
+}
+
+removeId('hello@gmail.com') // 반환값 : *****@gmail.com
+```
+
 ### 문제 9
 
 문자열을 입력받아, 대문자는 소문자로, 소문자는 대문자로 바꾼 결과를 반환하는 함수를 작성하세요.
