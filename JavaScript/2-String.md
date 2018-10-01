@@ -278,6 +278,19 @@ firstCapital('very difficult') // 반환값 : 'Very Difficult'
 
 문자열을 입력받아, 문자열 안에 들어있는 단어 중 가장 긴 단어를 반환하는 함수를 작성하세요. (문자열에 개행이 없다고 가정합니다.)
 
+```js
+function maxLength(str) {
+  let inputStrings = str.split(' ');
+  let orderedStrings = inputStrings.sort((a, b)=>{
+    return a.length < b.length;
+  });
+  return orderedStrings[0];
+}
+
+maxLength('focus on myself') // 'myself'
+```
+
+
 ### 문제 12
 
 문자열 `s`과 자연수 `n`을 입력받아, `s`의 첫 `n`개의 문자만으로 이루어진 새 문자열을 반환하는 함수를 작성하세요.
