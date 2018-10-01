@@ -278,6 +278,14 @@ firstCapital('very difficult') // 반환값 : 'Very Difficult'
 
 문자열을 입력받아, 문자열 안에 들어있는 단어 중 가장 긴 단어를 반환하는 함수를 작성하세요. (문자열에 개행이 없다고 가정합니다.)
 
+* 접근방법 
+  + 가장 긴 단어를 반환하는 함수 : function maxLength(str){}
+  + 입력받은 값을 공백으로 나눔
+  + 그 배열들 중에 가장 긴 단어 뽑기 .sort()메소드 사용
+  + 입력값을 내림차순으로 정렬한 다음
+  + 그 중 인덱스 번호가 [0]인거 반환!
+
+
 ```js
 function maxLength(str) {
   let inputStrings = str.split(' ');
