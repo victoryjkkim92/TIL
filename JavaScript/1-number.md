@@ -434,6 +434,25 @@ function starPattern(n){
 starPattern(5);
 ```
 
+선생님 코드 
+
+```js
+function print(height){
+  for (i = 0; i < height; i++){
+    const n = i + 1;
+    const line = ' '.repeat(height-n) + '* '.repeat(n)
+    console.log(line)
+  }
+  for (i = height-2; i >=0; i--){
+    const n = i + 1;
+    const line = ' '.repeat(height-n) + '* '.repeat(n)
+    console.log(line)
+  }
+}
+
+print(3)
+```
+
 1를 입력받은 경우:
 ```
 *
