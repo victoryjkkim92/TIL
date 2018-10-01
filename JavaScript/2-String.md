@@ -119,7 +119,7 @@ countChar('tomato'); -> {t: 2, o: 2, m: 1, a: 1}
 function isPalirome(input){
   for(let i = 0; i < input.length; i++){
     const left = i;
-    const right = input.length - 1;
+    const right = input.length - 1 -i;
     if(input[left] !== input[right]){
       return false
     }
