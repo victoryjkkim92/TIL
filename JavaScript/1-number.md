@@ -276,7 +276,7 @@ divide(20);  // 출력값 : 1,2,4,5,10,20 (20의 약수)
 ```js
 
 function prime(n){
-  for(i=2; i<n; i++){
+  for(let i=2; i<n; i++){
     if( n % i === 0 ){
       return '소수 아님';
     } else {
@@ -287,6 +287,20 @@ function prime(n){
 
 prime(7); // 반환값 : '소수'
 
+```
+
+```js
+function isPrime(x){
+  // 소수 : 1과 자기 자신 밖에 약수가 없는 수 
+  // -> 1과 자기자신이 아닌 약수가 하나라도 있으면 소수가 아니다. 
+  for(let i = 2; i < x; i++){
+    if (x % i === 0){
+      return false
+    }
+  }
+  return true
+}
+isPrime(2) // false
 ```
 
 
