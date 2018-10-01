@@ -150,6 +150,13 @@ removeDuplicates('tomato'); -> 'toma'
 removeDuplicates('bartender'); -> 'bartend'
 ```
 
+* 접근방법
+  + 문자열을 입력받아 ~ 반환하는 함수를 만들어라 : function removeDuplicates(str){}
+  + 새로운 문자열 반환해야하니까_새로운 문자열에 대한 변수 선언! let = ''
+  + 입력받은 문자열에서 중복된 문자가 제거된! 음.. 어떤 방식으로 접근 할 수 있을까?
+  + 일단 입력받은 문자열을 하나씩 살펴봐야하니까, for문을 쓰고 str.length까지 돌려본다
+  + 새로운 문자열 반환하려고 선언해 놓은 변수에, 만약 내가 지금 보고 있는 문자를 본 적이 없으면 담아주라고 한다
+  
 ```js
 function removeDuplicates(str) {
   let memory = '';
