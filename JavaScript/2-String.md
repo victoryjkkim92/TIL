@@ -245,20 +245,25 @@ const removeId2 = (input) => {
 
 * 접근 방법
  
-  + 문자열을 입력받아...반환하는 함수 : return | function changeCase(str){}
-  + if 문으로 만약 str이 대문자면 소문자로, else 대문자로 바꿔라
+  + 문자열을 입력받아...반환하는 함수 : return | function swapCase(str){}
+  + 글씨를 하나씩 앞에서부터 보고 (for문 사용)
+  + 내가 보고있는 글자가 대문자면 소문자로 바꿔서 저장하고
+  + 그게 아니면 소문자로 바꿔서 저장해줘
 
 ```js
-
-function changeCase(str){
-  if(str === str.toLowerCase()){
-    return str.toUpperCase()
-  } else {
-    return str.toLowerCase()
+function swapCase(input){
+  let memory = ''
+  for(let i = 0; i < input.length; i++){
+    if(input[i] === input[i].toUpperCase()){
+      memory += input[i].toLowerCase()
+    } else {
+      memory += input[i].toUpperCase()
+    }
   }
+  return memory;
 }
-changeCase('HELLO'); // hello
-changeCase('hello'); // HELLO
+
+// swapCase('JavaScript')  - > 'jAVAsCRIPT'
 ```
 
 ### 문제 10
