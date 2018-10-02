@@ -338,6 +338,21 @@ maxLength('focus on myself') // 'myself'
 
 문자열 `s`과 자연수 `n`을 입력받아, `s`의 첫 `n`개의 문자만으로 이루어진 새 문자열을 반환하는 함수를 작성하세요.
 
+* 접근방법
+  + 문자열을 볼 때 for문의 입력받은 자연수 n번 까지만 본다
+  + 그까지의 문자열을 빈문자열에 추가한다
+  
+```js
+function mixStr(s,n){
+ let memory = ''
+ for(let i = 0; i < n; i++){
+ memory += s[i]
+}
+ return memory
+}
+```
+mixStr('javascript',3)
+
 ### 문제 13
 
 Camel case의 문자열을 입력받아, snake case로 바꾼 새 문자열을 반환하는 함수를 작성하세요.
