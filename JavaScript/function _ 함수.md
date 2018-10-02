@@ -279,3 +279,33 @@ const negate = x => !x;
 일반적인 함수와 화살표 함수는 표기법에서만 다른 것이 아니고, 몇 가지 미묘한 차이점이 있습니다. 이에 대해서는 함수 더 알아보기 챕터에서 자세히 다룹니다.
 
 1. 다만, JavaScript 파일의 가장 바깥쪽에서 선언된 변수가 항상 전역 스코프를 갖는 것은 아닙니다. 어떤 스코프를 가질 지는 JavaScript 파일이 사용되는 방식에 따라 달라지는데, 이에 대해서는 모듈 챕터에서 자세히 다룹니다.
+
+
+
+
+
+
+
+
+
+# TIL 
+
+면접문제에 자주 나온다는 1급 시민 함수 정리!
+
+## First-Class functions
+
+A programming language is said to have **First-Class functions** when functions in that language are treated like any other variable. For example, in such a language, a function can be passed as an argument to other functions, can be returned by another function and can be assigned as a value to a variable.
+
+
+**First-Class functions** can
+
+* Assign a function to a variable
+* pass a function as an Argument
+* Return a function
+
+
+
+## 1급 시민 함수 
+
+프로그래밍 언어에서 다른 여느 변수처럼 취급되는 함수를 **1급 시민 함수**라고 부른다. 예를 들면, 그런 언어에서, 함수는 다른 함수의 인자로 넘겨질 수 있고, 다른 함수의 반환 값이 될 수 있고, 그리고 변수의 값으로 할당 될 수 있다. 
+
