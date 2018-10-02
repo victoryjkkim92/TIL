@@ -7,6 +7,20 @@
 range(3, 6); -> [3, 4, 5, 6]
 ```
 
+* 접근방법
+  + 새로운 배열 반환해야하니까 
+  + 빈 배열을 변수로 선언한 다음에 거기에 요소들을 추가해줌 .push()메소드 사용
+  + for문은 첫번째 인자로 들어온 값부터 두번째까지 포함되게 돌려줘야함
+
+function range(start, end) {
+  const numbers = [];
+  for (let i = start; i <= end; i++) {
+    numbers.push(i)
+  }
+  return numbers
+}
+range(3, 6); 
+
 ### 문제 2
 
 수 타입의 값으로만 이루어진 배열을 입력받아, 그 값들의 합을 구하는 함수를 작성하세요.
