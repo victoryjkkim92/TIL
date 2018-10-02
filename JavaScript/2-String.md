@@ -350,8 +350,10 @@ function mixStr(s,n){
 }
  return memory
 }
-```
+
 mixStr('javascript',3)
+```
+
 
 ### 문제 13
 
