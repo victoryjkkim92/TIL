@@ -12,6 +12,8 @@ range(3, 6); -> [3, 4, 5, 6]
   + 빈 배열을 변수로 선언한 다음에 거기에 요소들을 추가해줌 .push()메소드 사용
   + for문은 첫번째 인자로 들어온 값부터 두번째까지 포함되게 돌려줘야함
 
+```js
+
 function range(start, end) {
   const numbers = [];
   for (let i = start; i <= end; i++) {
@@ -20,6 +22,7 @@ function range(start, end) {
   return numbers
 }
 range(3, 6); 
+```
 
 ### 문제 2
 
