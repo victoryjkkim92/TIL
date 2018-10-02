@@ -103,7 +103,23 @@ leftPad('aha',5); // 반환값 : '  aha'
 ```
 countChar('tomato'); -> {t: 2, o: 2, m: 1, a: 1}
 ```
-
+```js
+function countChar(input) {
+  const obj = {}
+  for (let i = 0; i < input.length; i++) {
+    const char = input[i]
+    // 글자를 본 적이 없다면 "글자": 1을 적어준다.
+    if (!(char in obj)) {
+      obj[char] = 1
+    } else {
+      // 글자를 본 적이 있다면 횟수를 1증가시켜준다.
+      obj[char]++
+    }
+  }
+  return obj
+}
+countChar('tomato')
+```
 ### 문제 5
 
 문자열을 입력받아 그 문자열이 회문(palindrome)인지 판별하는 함수를 작성하세요. (회문이란, '토마토', 'never odd or even'과 같이 뒤에서부터 읽어도 똑같이 읽히는 문자열을 말합니다.)
