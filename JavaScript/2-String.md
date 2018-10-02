@@ -225,6 +225,20 @@ function removeId(input) {
 removeId('hello@gmail.com') // 반환값 : *****@gmail.com
 ```
 
+선생님 코드
+
+```js
+
+const removeId2 = (input) => {
+  // '@'을 기준으로 쪼갠 후
+  const splitted = input.split('@')
+  // id 부분과 같은 길이를 갖는 별표 문자열을 만든다.
+  const stars = '*'.repeat(splitted[0].length)
+  // 별표를 @, 도메인 부분과 이어붙인 후 반환한다.
+  return stars + '@' + splitted[1]
+}
+```
+
 ### 문제 9
 
 문자열을 입력받아, 대문자는 소문자로, 소문자는 대문자로 바꾼 결과를 반환하는 함수를 작성하세요.
