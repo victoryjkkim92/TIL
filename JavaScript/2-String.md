@@ -340,7 +340,7 @@ maxLength('focus on myself') // 'myself'
 
 * 접근방법
   + 문자열을 볼 때 for문의 입력받은 자연수 n번 까지만 본다
-  + 그까지의 문자열을 빈문자열에 추가한다
+  + 그까지의 문자열을 빈문자열로 선언해준 변수에 추가한다
   
 ```js
 function mixStr(s,n){
