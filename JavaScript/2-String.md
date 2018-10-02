@@ -215,11 +215,11 @@ removeId(‘keoeke@gmail.com’)
 
 function removeId(input) {
   const strings = input.split('@');
-  let newStr = '';
+  let memory = '';
   for (let i = 0; i < strings[0].length; i++) {
-    newStr += '*';
+    memory += '*';
   }
-  return newStr + '@' + strings[1];
+  return memory + '@' + strings[1];
 }
 
 removeId('hello@gmail.com') // 반환값 : *****@gmail.com
