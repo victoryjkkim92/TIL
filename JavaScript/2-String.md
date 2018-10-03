@@ -268,12 +268,12 @@ const removeId2 = (input) => {
 
 ```js
 function swapCase(input){
-  let memory = ''
+  let memory = '';
   for(let i = 0; i < input.length; i++){
     if(input[i] === input[i].toUpperCase()){
-      memory += input[i].toLowerCase()
+      memory += input[i].toLowerCase();
     } else {
-      memory += input[i].toUpperCase()
+      memory += input[i].toUpperCase();
     }
   }
   return memory;
@@ -344,14 +344,14 @@ maxLength('focus on myself') // 'myself'
   
 ```js
 function mixStr(s,n){
- let memory = ''
+ let memory = '';
  for(let i = 0; i < n; i++){
  memory += s[i]
 }
- return memory
+ return memory;
 }
 
-mixStr('javascript',3)
+mixStr('javascript',3);
 ```
 
 
@@ -366,23 +366,25 @@ Camel case의 문자열을 입력받아, snake case로 바꾼 새 문자열을 �
 
 ```js
 function changeCase(input) {
-  let memory = ''
+  let memory = '';
   for (let i = 0; i < input.length; i++) {
     if (input[i] === input[i].toUpperCase()){
-      memory += '_' + input[i].toLowerCase()
+      memory += '_' + input[i].toLowerCase();
     } else{
-      memory += input[i]
+      memory += input[i];
     }
   }
-  return(memory)
+  return memory;
 }
 
-changeCase('fooBar')
+changeCase('fooBar');
 ```
 
 ### 문제 14
 
 Snake case의 문자열을 입력받아, camel case로 바꾼 새 문자열을 반환하는 함수를 작성하세요.
+
+
 
 ### 문제 15
 
