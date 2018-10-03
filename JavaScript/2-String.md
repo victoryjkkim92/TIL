@@ -21,9 +21,9 @@ insensitiveEqual('hello', 'world'); -> false
 
 function insensitiveEqual(str1, str2) {
   if (str1.toLowerCase() === str2.toLowerCase()) {
-    return true
+    return true;
   } else {
-    return false
+    return false;
   }
 }
 ```
@@ -31,7 +31,7 @@ function insensitiveEqual(str1, str2) {
 ```js
 // 짧은 버전
 function insensitiveEqual(str1, str2) {
-  return str1.toLowerCase() === str2.toLowerCase()
+  return str1.toLowerCase() === str2.toLowerCase();
 }
 ```
 
@@ -83,13 +83,13 @@ leftPad('aha',5); // 반환값 : '  aha'
 
 ```js
    function count(str) {
-    let num = 0
+    let num = 0;
     for (let i = 0; i < str.length; i++) { 
         if (str[i] === 'a' || str[i] === 'e' || str[i] === 'i' || str[i] === 'o' || str[i] === 'u') {
-                num += 1
+              num += 1;
         }
     }
-    return num
+    return num;
     }
 
     count('hello')
@@ -105,20 +105,20 @@ countChar('tomato'); -> {t: 2, o: 2, m: 1, a: 1}
 ```
 ```js
 function countChar(input) {
-  const obj = {}
+  const obj = {};
   for (let i = 0; i < input.length; i++) {
-    const char = input[i]
+    const char = input[i];
     // 글자를 본 적이 없다면 "글자": 1을 적어준다.
     if (!(char in obj)) {
-      obj[char] = 1
+      obj[char] = 1;
     } else {
       // 글자를 본 적이 있다면 횟수를 1증가시켜준다.
-      obj[char]++
+      obj[char]++;
     }
   }
-  return obj
+  return obj;
 }
-countChar('tomato')
+countChar('tomato');
 ```
 ### 문제 5
 
@@ -137,9 +137,9 @@ function isPalirome(input){
     const left = i;
     const right = input.length - 1 -i;
     if(input[left] !== input[right]){
-      return false
+      return false;
     }
-      return true
+      return true;
   }
 }
 
@@ -178,10 +178,10 @@ function removeDuplicates(str) {
   let memory = '';
   for (let i = 0; i < str.length; i++) {
     if (!memory.includes(str[i])) {
-      memory += str[i]
+      memory += str[i];
     }
   }
-  console.log(memory)
+  console.log(memory);
 }
 
 removeDuplicates('tomato') // 'toma'
@@ -196,26 +196,26 @@ removeDuplicates('tomato') // 'toma'
 
 ```js
 function removeId(input){
- let seen = false
- let memory = ‘’
+ let seen = false;
+ let memory = ‘’;
  for (let i = 0; i < input.length; i++){
    // 내가 지금 보고 있는 글자가 ‘@’이면
    // seen의 값을 true로 바꾼다
    if (input[i] === ‘@’){
-     seen = true
+     seen = true;
    } if (seen === true){
-     memory += input[i]
+     memory += input[i];
    } else{
-     memory += ‘*’
+     memory += ‘*’;
    }
    // seen이 true이면
    // 내가 지금 보고 있는 글자 그대로 memory에 덧붙인다
    // 아니면, 별표를 대신 덧붙인다.
  }
- return memory
+ return memory;
  // 변환한 결과를 반환한다.
 }
-removeId(‘keoeke@gmail.com’)
+removeId(‘keoeke@gmail.com’);
 ```
 
 
@@ -238,7 +238,7 @@ function removeId(input) {
   return memory + '@' + strings[1];
 }
 
-removeId('hello@gmail.com') // 반환값 : *****@gmail.com
+removeId('hello@gmail.com'); // 반환값 : *****@gmail.com
 ```
 
 선생님 코드
@@ -279,7 +279,7 @@ function swapCase(input){
   return memory;
 }
 
-// swapCase('JavaScript')  - > 'jAVAsCRIPT'
+// swapCase('JavaScript');  - > 'jAVAsCRIPT'
 ```
 
 ### 문제 10
@@ -330,7 +330,7 @@ function maxLength(str) {
   return orderedStrings[0];
 }
 
-maxLength('focus on myself') // 'myself'
+maxLength('focus on myself'); // 'myself'
 ```
 
 
@@ -346,7 +346,7 @@ maxLength('focus on myself') // 'myself'
 function mixStr(s,n){
  let memory = '';
  for(let i = 0; i < n; i++){
- memory += s[i]
+ memory += s[i];
 }
  return memory;
 }
