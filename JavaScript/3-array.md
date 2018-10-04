@@ -75,6 +75,20 @@ removeFalsy([0, 1, null, 3, false]);
 
 배열을 입력받아, 중복된 요소가 제거된 새 배열을 반환하는 함수를 작성하세요.
 
+```js
+function removeDuplicates(arr){
+  let memory =[];
+  for (let i = 0; i < arr.length; i++){
+    if (!memory.includes(arr[i])){
+      memory.push(arr[i]);
+    }
+  }
+  return memory;
+}
+removeDuplicates(['hello','world','hello', 'great'])
+```
+
+
 ### 문제 5
 
 수 타입의 값으로만 이루어진 두 배열을 입력받아, 다음과 같이 동작하는 함수를 작성하세요.
@@ -86,6 +100,27 @@ removeFalsy([0, 1, null, 3, false]);
 addArray([1, 2, 3], [4, 5, 6, 7]) -> [5, 7, 9, 7]
 ```
 
+
+```js
+function addArray(arr1, arr2) {
+  const memory = [];
+  if (arr1.length > arr2.length) {
+    for (let i = 0; i < arr1.length; i++) {
+      memory.push(arr1[i] + arr2[i]);
+      arr2.push(0);
+    }
+  } else {
+    for (let i = 0; i < arr2.length; i++) {
+      memory.push(arr1[i] + arr2[i]);
+      arr1.push(0);
+    }
+  }
+  return memory;
+}
+
+addArray([1, 2, 3, 5, 7, 8], [2, 3, 4, 8, 8]);
+```
+
 ### 문제 6
 
 배열을 입력받아, 배열의 요소 중 두 개를 선택하는 조합을 모두 포함하는 배열을 작성하세요.
@@ -93,6 +128,19 @@ addArray([1, 2, 3], [4, 5, 6, 7]) -> [5, 7, 9, 7]
 예:
 ```
 combination([1, 2, 3]); -> [[1, 2], [1, 3], [2, 3]]
+```
+
+```js
+function selectTwo(arr) {
+  const newArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = i; j < arr.length; j++){
+      newArr.push([arr[i], arr[j]]);
+    }
+  }
+  return newArr;
+}
+selectTwo([1, 2, 3, 4, 5]);
 ```
 
 ### 문제 7
