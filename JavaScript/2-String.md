@@ -450,6 +450,25 @@ function changeCase(input) {
 changeCase('fooBar');
 ```
 
+선생님 풀이
+
+```js
+// 아이디어  : 한 글자씩 보면서, 첫 글자가 아닌 대문자를 만났을 경우 바로 앞에 밑줄을 쳐준다
+function toSnakeCase(input) {
+  let memory = '';
+  for (let i = 0; i < input.length; i++) {
+    // 만약, 첫 글자가 아닌 대문자를 만났을 경우
+    if (i !== 0 && (input[i].toUpperCase()=== input[i])){
+      memory += '_'
+    }
+    memory += input[i].toLowerCase()
+  }
+  return memory;
+}
+
+toSnakeCase('fooBar');
+```
+
 ### 문제 14
 
 Snake case의 문자열을 입력받아, camel case로 바꾼 새 문자열을 반환하는 함수를 작성하세요.
