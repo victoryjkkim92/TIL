@@ -135,7 +135,9 @@ function selectTwo(arr) {
   const newArr = [];
   for (let i = 0; i < arr.length; i++) {
     for (let j = i; j < arr.length; j++){
+      if(arr[i] !== arr[j]){
       newArr.push([arr[i], arr[j]]);
+      }
     }
   }
   return newArr;
