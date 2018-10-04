@@ -17,9 +17,9 @@ range(3, 6); -> [3, 4, 5, 6]
 function range(start, end) {
   const numbers = [];
   for (let i = start; i <= end; i++) {
-    numbers.push(i)
+    numbers.push(i);
   }
-  return numbers
+  return numbers;
 }
 range(3, 6); 
 ```
