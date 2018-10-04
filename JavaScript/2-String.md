@@ -380,6 +380,9 @@ longestWord('hello fun javascript') // 'javascript'
   
 ```js
 function mixStr(s,n){
+  if (s.length < n) {
+    return s
+  }
  let memory = '';
  for(let i = 0; i < n; i++){
  memory += s[i];
@@ -390,6 +393,37 @@ function mixStr(s,n){
 mixStr('javascript',3);
 ```
 
+선생님 코드 
+
+```js
+// 루프 사용
+
+function firstLetters(s, n) {
+  if(s.length < n){
+    return s
+  }
+  let memory = ''
+  for (let i = 0; i < s.length; i++) {
+    memory += s[i]
+    if (memory.length === n) {
+      return memory
+    }
+  }
+}
+firstLetters('hello', 10);
+
+
+
+
+
+// 배열 메소드
+function firstLetters(s,n){
+  return s.slice(0,n);
+}
+
+
+firstLetters('hello',3);
+```
 
 ### 문제 13
 
