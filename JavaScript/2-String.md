@@ -358,6 +358,17 @@ function longestWord(input) {
 longestWord('hello fun javascript') // 'javascript'
 ```
 
+배열 메소드 
+
+```js
+function longestWord(input) {
+  const splitted = input.split(' ')
+  splitted.sort((x,y) => y.length - x.length)
+  return splitted[0]
+}
+
+longestWord('hello fun javascript') // 'javascript'
+```
 
 ### 문제 12
 
