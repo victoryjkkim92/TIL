@@ -28,9 +28,48 @@ range(3, 6);
 
 수 타입의 값으로만 이루어진 배열을 입력받아, 그 값들의 합을 구하는 함수를 작성하세요.
 
+```js
+reduce 메소드 사용
+function arrSum(input){
+  const arr = input;
+  return arr.reduce((acc, item) => acc + item, 0);
+}
+
+
+arrSum([1, 2, 3, 4, 5]); // 15
+```
+
+```js
+루프 사용
+function arrSum(input) {
+  let memory = 0;
+  for (let i = 0; i < input.length; i++) {
+    memory += input[i];
+  }
+  return memory;
+}
+
+arrSum([1, 2, 3, 4, 5]);
+```
+
 ### 문제 3
 
 배열을 입력받아, falsy인 요소가 제거된 새 배열을 반환하는 함수를 작성하세요.
+
+```js
+
+function removeFalsy(arr) {
+  let newArr = [];
+  for (let i = 0; i < arr.length; i++){
+    if (arr[i]) {
+      newArr.push(arr[i]);
+    }
+  }
+  return newArr;
+}
+
+removeFalsy([0, 1, null, 3, false]);
+```
 
 ### 문제 4
 
