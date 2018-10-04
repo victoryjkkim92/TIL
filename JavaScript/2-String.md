@@ -503,6 +503,31 @@ function split(str, cut) {
 split('Hello,First,World', ',');
 ```
 
+
+선생님코드
+
+```js
+// sep(구분자가 한 글자일 경우에만 잘 작동하는 코드임)
+
+function split(input, sep){ // 'seperator'
+  // 현재 보고 있는 단어
+  let memory = [];
+  let arr = [];
+  for(let i = 0; i < input.length; i++){
+    if(input[i] !== sep){
+      memory += input[i];
+    } else {
+      arr.push(memory);
+      memory = '';
+    } 
+  }
+  arr.push(memory);
+  return arr;
+}
+split('Hello,First,World', ',');
+```
+
+
 ### 문제 16
 
 2진수를 표현하는 문자열을 입력받아, 그 문자열이 나타내는 수 타입의 값을 반환하는 함수를 작성하세요. (`parseInt`를 사용하지 말고 작성해보세요.)
