@@ -5,4 +5,4 @@
 
 ## [2 자바스크립트 기초 문법 : 스위치조건문 / while문](https://repl.it/@victoryjkkim92/Day2switch)
 
-## [3 자바스크립트 기초 문법 : 생성자 함수](https://repl.it/@victoryjkkim92/Constructor-Function)
+## [3 자바스크립트 기초 문법 : Factory Function & Constructor Function](https://repl.it/@victoryjkkim92/Functions)
