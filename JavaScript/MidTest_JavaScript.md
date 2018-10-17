@@ -259,11 +259,10 @@ printGrade.apply(student,[100]); // Mary님의 점수는 100점입니다.
 	+ typeof false = boolean
 	+ typeof '1' = string
 	+ typeof 2000001 = number
-	+ typeof 1 = 1
 	+ typeof 'number' = string
 	+ typeof undefined = undefined
 	+ typeof 'true' = string
-	+ type of null = object
+	+ typeof null = object
 	+ typeof 'hello world' = string
 	+ typeof 0.54 = number
 * 표현식이란 JavaScript 문장의 구성 요소를 구분하는 하나의 단위로, 값으로 변환될 수 있는 부분을 가리킨다
