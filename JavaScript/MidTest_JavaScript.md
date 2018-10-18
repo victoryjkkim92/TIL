@@ -24,7 +24,7 @@
  4. text 타입의 input 요소 객체의 value 속성에 값을 대입하면, 그 값이 input 태그 내부에 채워진다.
  5. HTML 폼에는 여러 가지 기능이 내장되어 있으며, 그 중 '전송 기능'은 사용자가 전송 버튼을 누르거나 폼 안에서 엔터키를 입력했을 때 동작한다.
  6. mouseover 이벤트는 마우스가 요소 위에서 움직일 때 일어난다.
- 7. 첫 번째 할일 항목의 '위로' 버튼을 눌렀을 때 해당 항목이 맨 아래쪽으로 이동합니다. 이 버그가 발생하는 이유에 대해서 간단히 서술해주세요 :  The NonDocumentTypeChildNode.previousElementSibling read-only property returns the Element immediately prior to the specified one in its parent's children list, or null if the specified element is the first one in the list. / If the reference node is null, the specified node is added to the end of the list of children of the specified parent node.
+ 7. 첫 번째 할일 항목의 '위로' 버튼을 눌렀을 때 해당 항목이 맨 아래쪽으로 이동합니다. 이 버그가 발생하는 이유에 대해서 간단히 서술해주세요 : 부모요소의 자식요소로 리스트가 등록 되어 있고, 리스트 중 맨 처음 오는 것의 previousElementSibling은 null을 반환한다. 이 때는, appendChild와 같이 동작해서 부모요소 안의 맨 마지막 요소 뒤에 붙는다!
  8. 마지막 할일 항목의 '아래로' 버튼을 누르면 콘솔에서 에러가 발생하는 것을 관찰할 수 있습니다. 이 에러가 발생하는 이유에 대해서 간단히 서술해주세요 : 맨 마지막에 있는 리스트의 nextElementSilbing이 null이라 그것의 nextElementSibling을 찾을 수 없어서 
  9.  mouseover / mouseout 이벤트와, mouseenter / mouseleave 이벤트의 차이점 : `mouseover`와 `mouseout`는 자식요소의 경계선을 지나쳤을 때도 부모요소의 이벤트리스너가 호출된다 (버블링이 일어난다) / `mouseenter`와 `mouseleave`은 버블링이 일어나지 않는다
  
