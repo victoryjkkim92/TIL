@@ -7,12 +7,12 @@
 * RGB Challege 구현 시작
 * JavaScript 
 
-#21.Oct.2018(Sun)
+# 21.Oct.2018(Sun)
 
 * Todo List Website 자바스크립트 부분 시작하기
 	- 리스트 추가시 classList.add()사용해 클래스 추가해주기
 
-#22.Oct.2018(Mon)
+# 22.Oct.2018(Mon)
 
 * RGB Challenge 본격적으로 시작
 	+ 기본 레이아웃 끝
@@ -22,14 +22,14 @@
 	 + DOM에 type은 체크박스인  input 태그를 삽입하고 위치를 지정해준다 
 * string 알고리즘 다시 풀기 1
 
-#23.Oct.2018(Tues)
+# 23.Oct.2018(Tues)
 
 * [string 알고리즘 다시 풀기 2](https://repl.it/@victoryjkkim92/string-algorithm)
 * [array 알고리즘 다시 풀기1](https://repl.it/@victoryjkkim92/3-array-dasi-pulgi)
 * RGB Challenge : 모달 띄었을 때 상황 코딩(결국 잠시 보류)
 * [자바스크립트 중간 평가 (방향키 눌렀을때 커서 이동)](https://codepen.io/victoryjkkim92/pen/dgmRgq)
 
-#24.Oct.2018(Wed)
+# 24.Oct.2018(Wed)
 
 * array 알고리즘 다시 풀기 2
 * TodoList Netlify 배포  :  오류있어서 로딩 안됨
